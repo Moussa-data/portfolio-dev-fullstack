@@ -1,0 +1,513 @@
+/* ==== GLOBAL ==== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* ... ce qu’on a déjà mis ... */
+    padding-top: 20px;
+}
+
+.navbar {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #1a2b5a 0, #050818 55%);
+    color: white;
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+
+/* ==== NAVBAR ==== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    color: #4db8ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu a {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #4db8ff;
+}
+
+/* ==== CONTENU PRINCIPAL ==== */
+main {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* ====== CARTES GLOBALES ====== */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* ====== ROW FLEX (PREFERENCES / OBJECTIFS / PARCOURS) ====== */
+.cards-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.cards-row .card {
+    flex: 1;
+}
+
+/* Responsive : sur petit écran, on repasse en colonne */
+@media (max-width: 700px) {
+    .cards-row {
+        flex-direction: column;
+    }
+}
+
+/* ==== SECTION IMAGE ==== */
+.image-card {
+    text-align: center;
+}
+
+.image-card img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* ==== LIENS ==== */
+a {
+    color: #4db8ff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+}
+
+/* ==== BOUTON "Changer le texte" ==== */
+#change-text-btn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4db8ff;
+    color: #0a0f24;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#change-text-btn:hover {
+    background-color: white;
+}
+
+/* ==== PROJET 1 : COMPTEUR ==== */
+.counter {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#counter-value {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #4db8ff;
+}
+
+.counter button {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    color: #0a0f24;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.counter button:hover {
+    background-color: white;
+}
+
+/* ==== PROJET 2 : CONVERTISSEUR ==== */
+.convert {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.convert input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 160px;
+    text-align: center;
+}
+
+#convert-btn {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    color: #0a0f24;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#usd-result {
+    margin-top: 10px;
+    color: #4db8ff;
+    font-size: 18px;
+}
+
+/* ==== PROJET 3 : CITATIONS ==== */
+.quote-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#quote-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#quote-btn {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #0a0f24;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#quote-btn:hover {
+    background-color: white;
+}
+
+.meteo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.meteo input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+    text-align: center;
+}
+
+#meteo-btn {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    color: #0a0f24;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#meteo-resultat {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #4db8ff;
+}
+
+.stats {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#stats-btn {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    color: #0a0f24;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#stats-btn:hover {
+    background-color: white;
+}
+
+#stats-result {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #4db8ff;
+}
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaaaaa;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.footer-small {
+    font-size: 11px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.react-counter {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.react-counter-value {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #4db8ff;
+}
+
+.react-counter-buttons button {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    color: #0a0f24;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.react-counter-buttons button:hover {
+    background-color: white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    padding: 40px 0 25px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-tag {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4db8ff;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
+
+.hero-subtitle {
+    font-size: 15px;
+    color: #dddddd;
+    margin-bottom: 20px;
+}
+
+/* Boutons hero */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #4db8ff;
+    color: #050818;
+}
+
+.btn.secondary {
+    border: 1px solid #4db8ff;
+    color: #4db8ff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsive hero */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ===== SKILLS ===== */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+    margin-top: 15px;
+}
+
+.contact-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contact-field label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #cccccc;
+}
+
+.contact-field input,
+.contact-field textarea {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+    font-size: 14px;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #888888;
+}
+
+.contact-btn {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: #050818;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.contact-btn:hover {
+    background-color: white;
+}
+
+.contact-result {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #4db8ff;
+}
+
+/* petite adaptation mobile */
+@media (max-width: 600px) {
+    .contact-row {
+        flex-direction: column;
+    }
+}
+

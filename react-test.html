@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Compteur React – Moussa</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <!-- Import React + ReactDOM depuis CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Ton code React en JSX -->
+    <script type="text/babel">
+
+        function App() {
+            // React crée une variable "value" qui se met à jour automatiquement
+            const [value, setValue] = React.useState(0);
+
+            return (
+                <div style={{ textAlign: "center", marginTop: "40px", fontFamily: "Arial" }}>
+                    <h1>Mon premier compteur React</h1>
+
+                    <h2>{value}</h2>
+
+                    <button onClick={() => setValue(value + 1)}>+1</button>
+                    <button onClick={() => setValue(value - 1)}>-1</button>
+                    <button onClick={() => setValue(0)}>Reset</button>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+
+    </script>
+
+</body>
+</html>
+

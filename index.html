@@ -1,0 +1,249 @@
+                                <!DOCTYPE html>
+                                <html lang="fr">
+                                <head>
+                                    <meta charset="UTF-8">
+                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                    <title>Portfolio – Wane Camara Moussa</title>
+
+                            <link rel="stylesheet" href="style.css">
+                            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+                                </head>
+                                <body>
+
+                                <header class="navbar">
+                                    <h1 class="logo">WaneCamara</h1>
+
+                                    <nav class="menu">
+                                        <a href="#apropos">À propos</a>
+                                        <a href="#preferences">Préférences</a>
+                                        <a href="#objectifs">Objectifs</a>
+                                        <a href="#projets">Projets</a>
+                                        <a href="#liens">Liens</a>
+                                        <a href="#freelance">Mon rêve</a>
+                                        <a href="#contact">Contact</a>
+                                    </nav>
+                                </header>
+
+                                    <section class="card" id="contact">
+        <h2>Me contacter</h2>
+        <p>Si tu veux me contacter pour un projet, une collaboration ou une question, tu peux utiliser ce formulaire.</p>
+
+        <form id="contact-form" class="contact-form">
+            <div class="contact-row">
+                <div class="contact-field">
+                    <label for="contact-name">Nom</label>
+                    <input type="text" id="contact-name" placeholder="Ton nom">
+                </div>
+
+                <div class="contact-field">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" placeholder="ton.email@example.com">
+                </div>
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="4" placeholder="Ton message..."></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Envoyer</button>
+
+            <p id="contact-result" class="contact-result">.</p>
+        </form>
+    </section>
+
+
+                            <main>
+
+                <!-- HERO SECTION -->
+                <section class="hero">
+                    <div class="hero-content">
+                        <p class="hero-tag">Aspiring Full-Stack Developer</p>
+                        <h1 class="hero-title">Salut, moi c'est Moussa.</h1>
+                        <p class="hero-subtitle">
+                            Je construis petit à petit mon parcours dans le développement web :
+                            HTML, CSS, JavaScript, React et plus encore. Mon objectif : devenir
+                            développeur full-stack et un jour travailler à New York.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#projets" class="btn primary">Voir mes projets</a>
+                            <a href="#liens" class="btn secondary">Ressources que j'utilise</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION À PROPOS EXISTANTE -->
+                <section class="card" id="apropos">
+                    <h2>À propos de moi</h2>
+                    <p id="apropos-texte">
+                        Je suis en train d'apprendre le développement web (front-end et back-end)
+                        pour devenir développeur full-stack et, plus tard, travailler à New York.
+                    </p>
+                    <button id="change-text-btn">Changer le texte</button>
+                </section>
+
+
+                                    <div class="cards-row">
+                                        <section class="card" id="preferences">
+                                            <h2>Mes préférences</h2>
+                                            <ul>
+                                                <li>Technologie</li>
+                                                <li>Sport</li>
+                                                <li>Voyager</li>
+                                            </ul>
+                                        </section>
+
+                                        <section class="card" id="objectifs">
+                                            <h2>Mes objectifs</h2>
+                                            <ul>
+                                                <li>Devenir développeur full-stack en moins de 6 mois</li>
+                                                <li>Obtenir des certifications utiles</li>
+                                                <li>Construire un portfolio professionnel</li>
+                                            </ul>
+                                        </section>
+
+                                        <section class="card">
+                                            <h2>À propos de mon parcours</h2>
+                                            <p>
+                                                Je suis un développeur web en apprentissage, motivé et déterminé à construire mon avenir dans la tech.
+                                                J’apprends actuellement HTML, CSS, JavaScript, React et Node.js afin de devenir développeur full-stack.
+                                                Je vise à travailler sur des projets modernes et à développer mes compétences chaque jour.
+                                            </p>
+                                        </section>
+                                    </div>
+
+                                        <!-- SECTION SKILLS -->
+                                        <section class="card" id="skills">
+                                            <h2>Compétences</h2>
+                                            <p>Voici les technologies que je suis en train d'apprendre :</p>
+
+                                            <div class="skills-list">
+                                                <span class="skill-tag">HTML</span>
+                                                <span class="skill-tag">CSS</span>
+                                                <span class="skill-tag">JavaScript</span>
+                                                <span class="skill-tag">React (début)</span>
+                                                <span class="skill-tag">Node.js (bientôt)</span>
+                                                <span class="skill-tag">Git / GitHub</span>
+                                            </div>
+                                        </section> 
+
+
+                                         <section class="card" id="projets">
+                                        <h2>Mes projets</h2>
+                                        <p>Les projets que je développerai pendant ma formation seront affichés ici.</p>
+
+                                        <!-- Projet 1 : Compteur -->
+                                        <h3>Projet 1 : Compteur</h3>
+                                        <div class="counter">
+                                            <p id="counter-value">0</p>
+                                            <button id="btn-plus">+1</button>
+                                            <button id="btn-minus">-1</button>
+                                            <button id="btn-reset">Reset</button>
+                                        </div>
+
+                                        <!-- Projet 2 : Convertisseur EUR → USD -->
+                                        <h3>Projet 2 : Convertisseur EUR → USD</h3>
+                                        <div class="convert">
+                                            <input type="number" id="eur-input" placeholder="Montant en EUR">
+                                            <button id="convert-btn">Convertir</button>
+                                            <p id="usd-result">Résultat : —</p>
+                                        </div>
+
+                                        <!-- Projet 3 : Générateur de citations -->
+                                        <h3>Projet 3 : Citation Motivante</h3>
+                                        <div class="quote-box">
+                                            <p id="quote-text">Clique pour obtenir une citation inspirante !</p>
+                                            <button id="quote-btn">Nouvelle citation</button>
+                                        </div>
+
+                                        <h3>Projet 4 : Mini App Météo</h3>
+
+                                <div class="meteo">
+                                    <input type="text" id="ville-input" placeholder="Entrez une ville">
+                                    <button id="meteo-btn">Afficher la météo</button>
+
+                                    <p id="meteo-resultat">En attente d'une ville...</p>
+                                </div>
+
+                                <h3>Projet 5 : Statistiques sur des nombres</h3>
+                            <div class="stats">
+                                <p>On va calculer la somme et la moyenne de la liste : [5, 12, 8, 20, 3]</p>
+                                <button id="stats-btn">Calculer</button>
+                                <p id="stats-result">Résultat : —</p>
+                            </div>
+
+                                <h3>Projet React : Compteur (version React)</h3>
+                        <div id="react-counter-root"></div>
+                    </section>
+
+
+
+                             <section class="card image-card" id="freelance">
+                            <h2>Mon rêve : devenir développeur freelance</h2>
+                            <img src="https://images.unsplash.com/photo-1517245386807-9b3f0b61f24c"
+                                width="250"
+                                alt="Bureau de développeur freelance">
+                            <p>
+                                Mon objectif est de devenir développeur web indépendant, pouvoir créer mes propres projets, 
+                                travailler d'où je veux, et bâtir un style de vie libre tout en développant mes compétences 
+                                dans le web et le logiciel.
+                            </p>
+                        </section>
+
+                                    <section class="card" id="liens">
+                                        <h2>Liens utiles</h2>
+                                        <ul>
+                                            <li><a href="https://google.com" target="_blank">Google</a></li>
+                                            <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs</a></li>
+                                            <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+                                        </ul>
+                                    </section>
+
+                                </main>
+
+                                <!-- React + ReactDOM + Babel (pour JSX) -->
+                <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+                <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+                <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+                <!-- Code React pour le compteur -->
+                <script type="text/babel">
+                    function ReactCounter() {
+                        const [value, setValue] = React.useState(0);
+
+                        return (
+                            <div className="react-counter">
+                                <p className="react-counter-value">{value}</p>
+                                <div className="react-counter-buttons">
+                                    <button onClick={() => setValue(value + 1)}>+1</button>
+                                    <button onClick={() => setValue(value - 1)}>-1</button>
+                                    <button onClick={() => setValue(0)}>Reset</button>
+                                </div>
+                            </div>
+                        );
+                    }
+
+                    const rootElement = document.getElementById("react-counter-root");
+                    if (rootElement) {
+                        const root = ReactDOM.createRoot(rootElement);
+                        root.render(<ReactCounter />);
+                    }
+                </script>
+
+
+                                <footer class="footer">
+                            <p>© 2025 – Wane Camara Moussa. Tous droits réservés.</p>
+                            <p class="footer-small">Portfolio en cours d’apprentissage – HTML, CSS, JavaScript, React.</p>
+                        </footer>
+
+
+                                <!-- 🔥 JavaScript placé à la FIN, quand tout le HTML existe -->
+
+                            <!-- 🔥 JavaScript maintenant dans un fichier séparé -->
+                            <script src="app.js"></script>
+                            </body>
+                            </html>
+
+
+
