@@ -2016,3 +2016,11 @@ footer {
 }
 
 #contact .section-label { text-transform: uppercase; font-size: 13px; font-weight: 700; }
+
+
+/* ===== LOGO MWC (piste E « Miroir ») ===== */
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+.logo-mark { width: 32px; height: 32px; flex-shrink: 0; color: var(--white); }
+.logo span { letter-spacing: 0.5px; }
+.logo:hover .logo-mark { color: var(--accent-on-dark); }
+footer .logo-mark { width: 36px; height: 36px; }
