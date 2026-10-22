@@ -1764,3 +1764,130 @@ h2 { font-family: var(--font-display); letter-spacing: -0.02em; }
   align-items: center;
 }
 #projets .project-cta-btn { align-self: center; }
+
+
+/* ============================================================
+   ===== DIRECTION C — SERVICES + TARIFS (octobre 2026) =====
+   ============================================================ */
+/* ---------- Services ---------- */
+#services {
+  margin-inline: calc(50% - 50vw);
+  padding: 100px max(6%, calc(50vw - 560px)) !important;
+}
+#services h2 { font-size: 40px; font-weight: 600; margin-bottom: 48px; }
+#services .services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+#services .service-card {
+  background-color: var(--white) !important;
+  border-radius: 16px;
+  padding: 30px 28px;
+}
+#services .service-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.1);
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+#services .service-card h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* ---------- Tarifs ---------- */
+#tarifs {
+  margin-inline: calc(50% - 50vw);
+  padding: 100px max(6%, calc(50vw - 560px));
+  background: #F1F4F9;
+  border-top: none;
+}
+#tarifs h2 { font-size: 40px; font-weight: 600; }
+.tarif-card { border-radius: 20px; box-shadow: none; }
+.tarif-card:hover { box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); }
+.tarif-card-featured {
+  border: 2px solid var(--primary);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+}
+.tarif-head h3 { font-family: var(--font-display); font-weight: 600; }
+.tarif-price-amount { font-family: var(--font-display); font-weight: 700; }
+.tarif-cta { border-radius: 10px; }
+.tarif-notinc { border-radius: 12px; }
+.tarifs-included-col { border-radius: 16px; }
+.tarifs-included h3 { font-family: var(--font-display); font-weight: 600; }
+.tarifs-footnote { border-radius: 12px; }
+.tarifs-footnote i { color: var(--primary); margin-right: 6px; }
+
+@media (max-width: 900px) {
+  #services .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  #services, #tarifs { padding: 70px 6% !important; }
+  #services h2, #tarifs h2 { font-size: 28px; }
+  #services .services-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ---------- Offre de lancement ---------- */
+.launch-offer {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 40px;
+  align-items: center;
+  background: var(--dark-bg);
+  border-radius: 20px;
+  padding: 36px 40px;
+  color: var(--white);
+}
+.launch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FBBF24;
+  background: rgba(245, 158, 11, 0.14);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.launch-offer h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.launch-offer p { color: var(--text-light-muted); font-size: 15px; line-height: 1.65; max-width: 640px; }
+.launch-offer-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 220px;
+}
+.launch-old { color: #7D869A; text-decoration: line-through; font-size: 18px; }
+.launch-new {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.launch-new small { font-size: 16px; font-weight: 500; color: var(--text-light-muted); }
+.launch-offer .btn { border-radius: 10px; }
+
+@media (max-width: 768px) {
+  .launch-offer { grid-template-columns: 1fr; padding: 28px 24px; gap: 24px; }
+  .launch-offer h3 { font-size: 23px; }
+  .launch-offer-price { align-items: flex-start; }
+}

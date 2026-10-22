@@ -69,7 +69,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body>
 
@@ -446,6 +446,28 @@
         Tarifs HT indicatifs — un devis personnalisé est établi sous 48h après votre brief.
       </p>
 
+      <!-- Offre de lancement : mettre à jour le nombre de places restantes à chaque client signé -->
+      <div class="launch-offer">
+        <div class="launch-offer-text">
+          <span class="launch-badge">
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            Offre de lancement · <strong>3 places</strong>
+          </span>
+          <h3>Votre site vitrine à 690 € HT</h3>
+          <p>
+            Je lance mon activité et je cherche mes 3 premiers clients. Vous obtenez le
+            site vitrine essentiel (3 à 4 pages, adapté au mobile, formulaire de contact,
+            mise en ligne) à prix réduit. En échange : un avis honnête une fois le site
+            livré, et l'autorisation de le montrer dans mes réalisations.
+          </p>
+        </div>
+        <div class="launch-offer-price">
+          <span class="launch-old">990 €</span>
+          <span class="launch-new">690 € <small>HT</small></span>
+          <a href="#contact" class="btn btn-primary">Je réserve ma place</a>
+        </div>
+      </div>
+
       <div class="tarifs-grid">
 
         <div class="tarif-card">
@@ -455,7 +477,7 @@
           </div>
           <div class="tarif-price">
             <span class="tarif-price-label">À partir de</span>
-            <span class="tarif-price-amount">1 500 €</span>
+            <span class="tarif-price-amount">990 €</span>
             <span class="tarif-price-suffix">HT</span>
           </div>
           <ul class="tarif-features">
@@ -475,14 +497,14 @@
         </div>
 
         <div class="tarif-card tarif-card-featured">
-          <span class="tarif-badge">Le plus demandé</span>
+          <span class="tarif-badge">Recommandée pour les TPE</span>
           <div class="tarif-head">
             <h3>Refonte / Site vitrine pro</h3>
             <p class="tarif-target">Pour TPE et associations qui veulent un site qui convertit, mis à jour facilement.</p>
           </div>
           <div class="tarif-price">
             <span class="tarif-price-label">À partir de</span>
-            <span class="tarif-price-amount">2 800 €</span>
+            <span class="tarif-price-amount">1 900 €</span>
             <span class="tarif-price-suffix">HT</span>
           </div>
           <ul class="tarif-features">
@@ -490,7 +512,7 @@
             <li><i class="fa-solid fa-check"></i> Design sur mesure adapté à votre image</li>
             <li><i class="fa-solid fa-check"></i> Audit du site existant inclus (si refonte)</li>
             <li><i class="fa-solid fa-check"></i> SEO local (méta-tags, sitemap, données structurées)</li>
-            <li><i class="fa-solid fa-check"></i> Hébergement &amp; nom de domaine 1<sup>ère</sup> année</li>
+            <li><i class="fa-solid fa-check"></i> Hébergement &amp; nom de domaine la 1re année</li>
             <li><i class="fa-solid fa-check"></i> Formation client (1h en visio)</li>
             <li><i class="fa-solid fa-check"></i> 2 séries de modifications + garantie 1 mois</li>
             <li><i class="fa-solid fa-check"></i> Livraison en 4 à 6 semaines</li>
@@ -505,7 +527,7 @@
           </div>
           <div class="tarif-price">
             <span class="tarif-price-label">À partir de</span>
-            <span class="tarif-price-amount">4 500 €</span>
+            <span class="tarif-price-amount">3 500 €</span>
             <span class="tarif-price-suffix">HT</span>
           </div>
           <ul class="tarif-features">
@@ -576,9 +598,10 @@
       </div>
 
       <p class="tarifs-footnote">
-        💡 <strong>Première fois ?</strong> On commence par un appel gratuit
-        de 20 min pour comprendre votre besoin. Vous repartez avec un devis clair,
-        sans engagement, sous 48h.
+        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+        <strong>Première fois ?</strong> On commence par un échange gratuit
+        pour comprendre votre besoin. Vous repartez avec un devis clair,
+        sans engagement, sous 48 h.
       </p>
     </section>
 
@@ -725,6 +748,7 @@
               <label for="devis-project-type">Type de projet <span class="required" aria-hidden="true">*</span></label>
               <select id="devis-project-type" name="project_type" required>
                 <option value="" disabled selected>— Choisir —</option>
+                <option value="Offre de lancement (690 €)">Offre de lancement (690 € HT)</option>
                 <option value="Site vitrine">Site vitrine</option>
                 <option value="Site e-commerce">Site e-commerce</option>
                 <option value="Refonte de site existant">Refonte de site existant</option>
