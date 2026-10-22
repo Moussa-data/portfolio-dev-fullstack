@@ -69,7 +69,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css?v=6">
+  <link rel="stylesheet" href="assets/style.css?v=7">
 </head>
 <body>
 
@@ -715,9 +715,31 @@
       <div class="contact-container">
 
         <div class="contact-info">
-          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> m.wanecamara@gmail.com</p>
-          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> 06 05 66 61 90</p>
-          <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vaucresson (92), France</p>
+          <h3>Parlons de votre projet</h3>
+          <p class="contact-lead">
+            Décrivez-moi votre activité et votre besoin. Je vous réponds sous 24 h
+            avec mes questions ou une première estimation.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:m.wanecamara@gmail.com">m.wanecamara@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <a href="tel:+33605666190">06 05 66 61 90</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              <a href="https://calendly.com/m-wanecamara" target="_blank" rel="noopener noreferrer">Réserver un appel de 15 min</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Vaucresson (92) · déplacements dans l'ouest parisien</span>
+            </li>
+          </ul>
+
           <p class="contact-note">
             <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
             Plus vous me donnez d'infos sur votre projet, plus je peux vous répondre précisément.
@@ -804,22 +826,39 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Moussa WANE CAMARA. Tous droits réservés.</p>
-    <p class="footer-links">
-      <a href="/mentions-legales.html">Mentions légales</a>
-      <span aria-hidden="true">·</span>
-      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
-    </p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#accueil" class="logo"><span class="logo-dot" aria-hidden="true"></span>MWC</a>
+        <p>Développeur web freelance à Vaucresson (92). Sites et applications pour artisans et TPE.</p>
+      </div>
 
-    <p class="footer-tagline">
-      Fait avec <i class="fa-solid fa-heart" aria-hidden="true" style="color:#e24b4a"></i>
-      et <i class="fa-solid fa-code" aria-hidden="true"></i> code
-    </p>
+      <nav class="footer-nav" aria-label="Pied de page">
+        <a href="#projets">Projets</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <div class="footer-links">
-      <a href="#accueil">Accueil</a>
-      <a href="#projets">Projets</a>
-      <a href="#contact">Contact</a>
+      <div class="footer-social">
+        <a href="https://github.com/Moussa-data" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/moussa-wane-05a4471aa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:m.wanecamara@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Moussa WANE CAMARA. Tous droits réservés.</p>
+      <p class="footer-legal">
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <span aria-hidden="true">·</span>
+        <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+      </p>
     </div>
   </footer>
 
