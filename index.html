@@ -67,15 +67,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=2">
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="#accueil" class="logo">MWC</a>
+      <a href="#accueil" class="logo"><span class="logo-dot" aria-hidden="true"></span>MWC</a>
 
       <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
         <span aria-hidden="true">☰</span>
@@ -93,29 +93,31 @@
 
   <main>
 
+    <!-- ================================================================
+         HERO — Direction C « Tech moderne » (octobre 2026)
+         ================================================================ -->
     <section id="accueil">
       <div class="hero-content">
         <div class="hero-text">
           <p class="hero-label">
             <span class="status-dot" aria-hidden="true"></span>
-            Disponible pour vos projets web
+            Disponible pour de nouveaux projets
           </p>
 
           <p class="hero-kicker">Moussa WANE CAMARA — Développeur web freelance</p>
 
-          <h1>Des sites web <span>sur mesure</span><br>pour votre activité</h1>
+          <h1>Électricien le jour.<br><span>Développeur web</span><br>pour vos projets.</h1>
 
           <p class="hero-description">
-            Vitrine, e-commerce ou application sur mesure — je conçois et livre
-            un site pensé pour faire grandir votre activité,
-            sous 4 à 6 semaines, avec un devis ferme dès le départ.
+            Sites vitrines, e-commerce et applications sur mesure pour artisans et TPE.
+            Du code solide, des délais tenus, un devis ferme.
           </p>
 
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">
               <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Demander un devis
             </a>
-            <a href="#projets" class="btn btn-secondary">Voir mes projets</a>
+            <a href="#projets" class="btn btn-secondary">Voir les projets</a>
           </div>
 
           <p class="hero-alt-cta">
@@ -129,19 +131,11 @@
             </a>
           </p>
 
-          <ul class="hero-stats">
-            <li>
-              <strong>2</strong>
-              <span>projets en prod</span>
-            </li>
-            <li>
-              <strong>&lt; 24h</strong>
-              <span>de réponse</span>
-            </li>
-            <li>
-              <strong>Gratuit</strong>
-              <span>premier devis</span>
-            </li>
+          <ul class="hero-techs" aria-label="Technologies">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>PostgreSQL</li>
           </ul>
 
           <div class="social-links">
@@ -157,9 +151,21 @@
           </div>
         </div>
 
-        <div class="hero-image">
-          <div class="hero-circle" aria-hidden="true"></div>
-          <div class="hero-avatar" aria-hidden="true">MWC</div>
+        <!-- Visuel : capture d'EcoRide dans une fenêtre de navigateur -->
+        <div class="hero-visual">
+          <div class="hero-browser">
+            <div class="hero-browser-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <span class="hero-browser-url">moussa.alwaysdata.net</span>
+            </div>
+            <img src="assets/images/ecoride.png" alt="Capture d'écran d'EcoRide, plateforme de covoiturage">
+          </div>
+
+          <a href="#projets" class="hero-project-card">
+            <span class="hero-project-label">Projet en production</span>
+            <strong>EcoRide</strong>
+            <span class="hero-project-desc">Covoiturage : comptes, messagerie, réservations, espace admin.</span>
+          </a>
         </div>
       </div>
     </section>
