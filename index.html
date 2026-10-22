@@ -69,7 +69,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 
@@ -268,46 +268,48 @@
       <span class="section-label">Ma stack</span>
       <h2>Les bons outils pour chaque besoin</h2>
       <p class="stack-intro">
-        Pas de magie : chaque projet utilise les technologies adaptées à votre objectif business.
-        Voici comment je compose, selon votre besoin.
+        Chaque projet utilise les technologies adaptées à votre objectif, pas l'inverse.
+        Voici comment je compose selon votre besoin.
       </p>
 
       <div class="stack-grid">
 
         <div class="stack-card">
           <div class="stack-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
-          <h3>Pour vos sites vitrines</h3>
-          <p>HTML5, CSS3 moderne, JavaScript vanilla. Site léger, rapide sur mobile, optimisé pour Google.</p>
+          <h3>Sites vitrines</h3>
+          <p>HTML, CSS et JavaScript. Un site léger, rapide sur mobile et bien référencé sur Google.</p>
         </div>
 
         <div class="stack-card">
           <div class="stack-icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
-          <h3>Pour vos sites e-commerce</h3>
-          <p>WordPress + WooCommerce ou solution sur mesure avec Stripe. Paiement sécurisé, gestion des commandes.</p>
+          <h3>Sites e-commerce</h3>
+          <p>WordPress + WooCommerce, ou une boutique sur mesure avec paiement Stripe. Gestion des commandes incluse.</p>
         </div>
 
         <div class="stack-card">
           <div class="stack-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-          <h3>Pour vos applications web</h3>
-          <p>PHP 8 en POO, base de données SQL/SQLite, sécurité HTTPS. Comme EcoRide : auth, espace admin, fonctionnalités sur mesure.</p>
+          <h3>Applications web</h3>
+          <p>React, Node.js et PostgreSQL, ou PHP. Comptes utilisateurs, espace admin, outils métier sur mesure.</p>
         </div>
 
         <div class="stack-card">
           <div class="stack-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
-          <h3>Outils &amp; méthodes</h3>
-          <p>Git/GitHub pour le code, Figma pour les maquettes, Netlify/OVH pour l'hébergement, Google Analytics pour le suivi.</p>
+          <h3>Outils &amp; méthode</h3>
+          <p>Git et GitHub pour le code, Figma pour les maquettes, Netlify ou OVH pour l'hébergement.</p>
         </div>
 
       </div>
 
       <div class="stack-techs">
-        <p class="stack-techs-label">Technologies maîtrisées</p>
+        <p class="stack-techs-label">Technologies utilisées</p>
         <ul class="stack-techs-list">
           <li><i class="fa-brands fa-html5 html-icon" aria-hidden="true"></i> HTML5</li>
           <li><i class="fa-brands fa-css3-alt css-icon" aria-hidden="true"></i> CSS3</li>
           <li><i class="fa-brands fa-js js-icon" aria-hidden="true"></i> JavaScript</li>
-          <li><i class="fa-brands fa-php php-icon" aria-hidden="true"></i> PHP 8 (POO)</li>
-          <li><i class="fa-solid fa-database db-icon" aria-hidden="true"></i> SQL / SQLite</li>
+          <li><i class="fa-brands fa-react react-icon" aria-hidden="true"></i> React</li>
+          <li><i class="fa-brands fa-node-js node-icon" aria-hidden="true"></i> Node.js</li>
+          <li><i class="fa-brands fa-php php-icon" aria-hidden="true"></i> PHP 8</li>
+          <li><i class="fa-solid fa-database db-icon" aria-hidden="true"></i> PostgreSQL / MySQL</li>
           <li><i class="fa-brands fa-git-alt git-icon" aria-hidden="true"></i> Git / GitHub</li>
         </ul>
       </div>
@@ -315,65 +317,61 @@
 
     <section id="projets">
       <span class="section-label">Projets</span>
-      <h2>Mes projets récents</h2>
+      <h2>Ce que j'ai construit</h2>
+
+      <!-- Projet phare : application de feuilles d'heures -->
+      <article class="project-featured">
+        <div class="project-featured-text">
+          <span class="project-badge project-badge-wip">En cours de développement</span>
+          <h3>Feuilles d'heures numériques pour le BTP</h3>
+          <p class="project-context">
+            <strong>Le problème :</strong> sur les chantiers, les feuilles d'heures papier
+            provoquent des oublis, des erreurs de calcul et des codes chantier mal reportés.
+            Je l'ai vécu en tant qu'électricien.
+          </p>
+          <p class="project-result">
+            <strong>Ce que je construis :</strong> une application web pour les salariés et
+            leurs responsables. Saisie des heures par chantier depuis le téléphone, signature
+            électronique, PDF automatique, validation par le manager et export des heures.
+          </p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>Prisma</span>
+          </div>
+        </div>
+        <div class="project-featured-visual">
+          <div class="phone-frame">
+            <img src="assets/images/app-heures-mobile.png" alt="Maquette de l'application sur téléphone : liste des feuilles d'heures reçues par le responsable">
+          </div>
+        </div>
+      </article>
 
       <div class="projects-grid">
 
         <div class="project-card">
           <a href="https://moussa.alwaysdata.net" target="_blank" rel="noopener noreferrer" class="project-image">
-            <img src="assets/images/ecoride.png" alt="Capture d'écran d'EcoRide — covoiturage écologique" loading="lazy">
+            <img src="assets/images/ecoride.png" alt="Capture d'écran d'EcoRide, plateforme de covoiturage" loading="lazy">
           </a>
           <div class="project-content">
-            <h3>EcoRide — Plateforme de covoiturage 🌱</h3>
-            <p class="project-context">
-              <strong>Contexte :</strong> projet personnel pour démontrer ma capacité à livrer une application
-              web complète, de la conception au déploiement en production.
-            </p>
+            <span class="project-badge">En production</span>
+            <h3>EcoRide — Plateforme de covoiturage</h3>
             <p class="project-result">
-              <strong>Ce que j'ai livré :</strong> une application web complète avec espace utilisateur,
-              messagerie inter-membres, système de réservation, avis clients et tableau de bord administrateur.
-              Site déployé en production avec HTTPS et nom de domaine dédié.
+              Une application web complète : espace utilisateur, messagerie entre membres,
+              réservations, avis et tableau de bord administrateur. En ligne avec HTTPS.
             </p>
             <div class="project-tags">
-              <span>Application web</span>
-              <span>Espace utilisateur</span>
-              <span>Tableau de bord admin</span>
-              <span>HTTPS</span>
+              <span>PHP 8</span>
+              <span>SQLite</span>
+              <span>Espace admin</span>
             </div>
             <div class="project-links">
               <a href="https://moussa.alwaysdata.net" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                 <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le site
               </a>
-              <a href="https://github.com/Moussa-data/covoiturage-ecoride" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="color:#0f172a; border-color:#e2e8f0;">
+              <a href="https://github.com/Moussa-data/covoiturage-ecoride" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                 <i class="fa-brands fa-github" aria-hidden="true"></i> Code source
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <a href="https://moussa-wane-camara.netlify.app" target="_blank" rel="noopener noreferrer" class="project-image">
-            <img src="assets/images/portfolio.png" alt="Capture d'écran du portfolio" loading="lazy">
-          </a>
-          <div class="project-content">
-            <h3>Portfolio personnel</h3>
-            <p class="project-context">
-              <strong>Contexte :</strong> outil commercial pour présenter mon activité freelance,
-              mes projets et permettre aux prospects de demander un devis en ligne.
-            </p>
-            <p class="project-result">
-              <strong>Ce que j'ai livré :</strong> site responsive, formulaire de devis intégré,
-              page de confirmation, notifications email automatiques via Netlify Forms.
-            </p>
-            <div class="project-tags">
-              <span>Site vitrine</span>
-              <span>Formulaire devis</span>
-              <span>Responsive</span>
-              <span>SEO de base</span>
-            </div>
-            <div class="project-links">
-              <a href="https://moussa-wane-camara.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le site
               </a>
             </div>
           </div>
@@ -384,12 +382,12 @@
             <div class="project-cta-icon">
               <i class="fa-solid fa-rocket" aria-hidden="true"></i>
             </div>
-            <h3>Soyez le prochain projet</h3>
+            <h3>Votre projet, le prochain ?</h3>
             <p>
-              Mon prochain projet en production, c'est peut-être le vôtre.
-              Demandez un devis gratuit aujourd'hui et lancez votre site dans 4 à 6 semaines.
+              Un site pour votre entreprise, ou un outil pour simplifier votre quotidien.
+              Parlons-en : le brief et le devis sont gratuits.
             </p>
-            <a href="#contact" class="btn btn-primary project-cta-btn">
+            <a href="#contact" class="btn project-cta-btn">
               <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Demander un devis
             </a>
           </div>

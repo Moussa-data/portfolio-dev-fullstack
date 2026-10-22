@@ -1619,3 +1619,148 @@ h2 { font-family: var(--font-display); letter-spacing: -0.02em; }
   .about-duo, .about-facts { grid-template-columns: 1fr; }
   .about-duo-col + .about-duo-col { border-left: none; border-top: 1px solid var(--border-dark); }
 }
+
+
+/* ============================================================
+   ===== DIRECTION C — COMPÉTENCES + PROJETS (octobre 2026) =====
+   ============================================================ */
+/* ---------- Compétences ---------- */
+#competences {
+  margin-inline: calc(50% - 50vw);
+  padding: 100px max(6%, calc(50vw - 560px));
+  background: #F1F4F9;
+}
+#competences h2 { font-size: 40px; font-weight: 600; }
+.stack-card { border-radius: 16px; }
+.stack-icon {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+}
+.stack-card h3 { font-family: var(--font-display); font-weight: 600; }
+.stack-techs-list li { border-radius: 10px; }
+.react-icon { color: #0EA5E9; }
+.node-icon { color: #16A34A; }
+
+/* ---------- Projets : section sombre ---------- */
+#projets {
+  margin-inline: calc(50% - 50vw);
+  padding: 100px max(6%, calc(50vw - 560px));
+  background: var(--dark-bg);
+}
+#projets .section-label { color: var(--accent-on-dark); text-align: center; letter-spacing: 1px; }
+#projets h2 {
+  color: var(--white);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 48px;
+}
+
+.project-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ADE80;
+  margin-bottom: 14px;
+}
+.project-badge-wip { background: rgba(245, 158, 11, 0.14); color: #FBBF24; }
+
+/* Projet phare */
+.project-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 48px;
+  align-items: center;
+  background: var(--dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  padding: 48px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.project-featured h3 {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+#projets .project-context,
+#projets .project-result { color: var(--text-light-muted); }
+#projets .project-context strong,
+#projets .project-result strong { color: var(--white); }
+#projets .project-tags span {
+  background: rgba(59, 130, 246, 0.12);
+  color: #93C5FD;
+}
+.project-featured-visual {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -48px;
+  align-self: end;
+}
+.phone-frame {
+  width: 280px;
+  height: 440px;
+  overflow: hidden;
+  border: 8px solid #1F2A40;
+  border-bottom: none;
+  border-radius: 36px 36px 0 0;
+  background: var(--white);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+.phone-frame img { display: block; width: 100%; height: auto; }
+
+/* Cartes projets */
+#projets .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+#projets .project-card {
+  background: var(--dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  box-shadow: none;
+}
+#projets .project-card:hover { border-color: rgba(59, 130, 246, 0.5); box-shadow: none; }
+#projets .project-image { background: #0B1120; border-bottom: 1px solid var(--border-dark); }
+#projets .project-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--white);
+}
+#projets .btn { border-radius: 10px; }
+#projets .btn-secondary { color: var(--white); border-color: #2A3550; }
+
+#projets .project-card-cta {
+  background: var(--primary);
+  border: none;
+}
+#projets .project-card-cta h3 { color: var(--white); font-size: 26px; }
+#projets .project-card-cta p { color: rgba(255, 255, 255, 0.9); }
+#projets .project-cta-btn { background: var(--white); color: var(--primary); }
+#projets .project-cta-btn:hover { background: var(--dark-bg); color: var(--white); }
+
+@media (max-width: 768px) {
+  #competences, #projets { padding: 70px 6%; }
+  #competences h2, #projets h2 { font-size: 28px; text-align: left; }
+  #projets .section-label { text-align: left; }
+  .project-featured { grid-template-columns: 1fr; padding: 28px 24px; gap: 32px; }
+  .project-featured h3 { font-size: 24px; }
+  .project-featured-visual { margin-bottom: -28px; }
+  .phone-frame { width: 240px; height: 360px; }
+  #projets .projects-grid { grid-template-columns: 1fr; }
+}
+
+#projets .project-links { margin-top: 20px; }
+#projets .project-cta-content {
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+#projets .project-cta-btn { align-self: center; }
