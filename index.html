@@ -1,249 +1,795 @@
-                                <!DOCTYPE html>
-                                <html lang="fr">
-                                <head>
-                                    <meta charset="UTF-8">
-                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                    <title>Portfolio – Wane Camara Moussa</title>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moussa WANE CAMARA — Développeur web full stack freelance</title>
 
-                            <link rel="stylesheet" href="style.css">
-                            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-                                </head>
-                                <body>
+  <meta name="description" content="Dev web freelance à Vaucresson (92) — sites vitrines, e-commerce et applis sur mesure pour artisans et TPE. Devis gratuit sous 48h.">
+  <meta name="author" content="Moussa WANE CAMARA">
+  <meta name="theme-color" content="#020817">
+  <meta name="geo.region" content="FR-92">
+  <meta name="geo.placename" content="Vaucresson">
 
-                                <header class="navbar">
-                                    <h1 class="logo">WaneCamara</h1>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Moussa WANE CAMARA — Développeur web freelance Vaucresson 92">
+  <meta property="og:description" content="Sites vitrines, e-commerce et applications web sur mesure pour TPE et artisans du 92. Devis gratuit, réponse sous 24h.">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://moussa-wane-camara.netlify.app/">
+  <meta property="og:image" content="https://moussa-wane-camara.netlify.app/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Moussa WANE CAMARA — Développeur web freelance à Vaucresson (92)">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moussa WANE CAMARA — Dev web freelance">
+  <meta name="twitter:description" content="Sites vitrines, e-commerce et applis sur mesure pour TPE du 92. Devis sous 48h.">
+  <meta name="twitter:image" content="https://moussa-wane-camara.netlify.app/assets/og-card.png">
 
-                                    <nav class="menu">
-                                        <a href="#apropos">À propos</a>
-                                        <a href="#preferences">Préférences</a>
-                                        <a href="#objectifs">Objectifs</a>
-                                        <a href="#projets">Projets</a>
-                                        <a href="#liens">Liens</a>
-                                        <a href="#freelance">Mon rêve</a>
-                                        <a href="#contact">Contact</a>
-                                    </nav>
-                                </header>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://moussa-wane-camara.netlify.app",
+    "name": "Moussa WANE CAMARA — Développeur web freelance",
+    "description": "Développeur web freelance pour artisans, indépendants et TPE du 92 et de la région parisienne. Sites vitrines, e-commerce, applications web sur mesure.",
+    "url": "https://moussa-wane-camara.netlify.app",
+    "telephone": "+33605666190",
+    "email": "m.wanecamara@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vaucresson",
+      "postalCode": "92420",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Vaucresson"},
+      {"@type": "City", "name": "Garches"},
+      {"@type": "City", "name": "Saint-Cloud"},
+      {"@type": "City", "name": "Marnes-la-Coquette"},
+      {"@type": "City", "name": "Boulogne-Billancourt"},
+      {"@type": "City", "name": "Issy-les-Moulineaux"},
+      {"@type": "City", "name": "Clamart"},
+      {"@type": "City", "name": "Rueil-Malmaison"},
+      {"@type": "AdministrativeArea", "name": "Hauts-de-Seine (92)"},
+      {"@type": "Country", "name": "France"}
+    ],
+    "priceRange": "€€",
+    "image": "https://moussa-wane-camara.netlify.app/assets/images/portfolio.png",
+    "sameAs": [
+      "https://github.com/Moussa-data",
+      "https://www.linkedin.com/in/moussa-wane-05a4471aa/"
+    ]
+  }
+  </script>
 
-                                    <section class="card" id="contact">
-        <h2>Me contacter</h2>
-        <p>Si tu veux me contacter pour un projet, une collaboration ou une question, tu peux utiliser ce formulaire.</p>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232563eb'/%3E%3Ctext x='50%25' y='62%25' text-anchor='middle' fill='%23fff' font-family='Inter,Arial,sans-serif' font-weight='700' font-size='30'%3EM%3C/text%3E%3C/svg%3E">
 
-        <form id="contact-form" class="contact-form">
-            <div class="contact-row">
-                <div class="contact-field">
-                    <label for="contact-name">Nom</label>
-                    <input type="text" id="contact-name" placeholder="Ton nom">
-                </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
 
-                <div class="contact-field">
-                    <label for="contact-email">Email</label>
-                    <input type="email" id="contact-email" placeholder="ton.email@example.com">
-                </div>
-            </div>
+  <header>
+    <nav>
+      <a href="#accueil" class="logo">MWC</a>
 
-            <div class="contact-field">
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" rows="4" placeholder="Ton message..."></textarea>
-            </div>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true">☰</span>
+      </button>
 
-            <button type="submit" class="contact-btn">Envoyer</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#contact" class="nav-btn">Demander un devis</a>
+      </div>
+    </nav>
+  </header>
 
-            <p id="contact-result" class="contact-result">.</p>
-        </form>
+  <main>
+
+    <section id="accueil">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-label">
+            <span class="status-dot" aria-hidden="true"></span>
+            Disponible pour vos projets web
+          </p>
+
+          <p class="hero-kicker">Moussa WANE CAMARA — Développeur web freelance</p>
+
+          <h1>Des sites web <span>sur mesure</span><br>pour votre activité</h1>
+
+          <p class="hero-description">
+            Vitrine, e-commerce ou application sur mesure — je conçois et livre
+            un site pensé pour faire grandir votre activité,
+            sous 4 à 6 semaines, avec un devis ferme dès le départ.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Demander un devis
+            </a>
+            <a href="#projets" class="btn btn-secondary">Voir mes projets</a>
+          </div>
+
+          <p class="hero-alt-cta">
+            Pas envie de remplir un formulaire ?
+            <a href="https://calendly.com/m-wanecamara" target="_blank" rel="noopener noreferrer" class="hero-alt-link">
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> RDV 15 min en ligne
+            </a>
+            <span class="hero-alt-sep">·</span>
+            <a href="tel:+33605666190" class="hero-alt-link">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> 06 05 66 61 90
+            </a>
+          </p>
+
+          <ul class="hero-stats">
+            <li>
+              <strong>2</strong>
+              <span>projets en prod</span>
+            </li>
+            <li>
+              <strong>&lt; 24h</strong>
+              <span>de réponse</span>
+            </li>
+            <li>
+              <strong>Gratuit</strong>
+              <span>premier devis</span>
+            </li>
+          </ul>
+
+          <div class="social-links">
+            <a href="https://github.com/Moussa-data" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/moussa-wane-05a4471aa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:m.wanecamara@gmail.com" aria-label="Email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="hero-circle" aria-hidden="true"></div>
+          <div class="hero-avatar" aria-hidden="true">MWC</div>
+        </div>
+      </div>
     </section>
 
+    <section id="process" class="process-band">
+      <div class="process-inner">
+        <span class="section-label">Comment ça se passe</span>
+        <h2>Un parcours simple, du brief à la mise en ligne</h2>
 
-                            <main>
+        <ol class="process-steps">
+          <li>
+            <span class="process-step-num">1</span>
+            <h3>Brief gratuit</h3>
+            <p>On échange 30 min pour comprendre votre activité, vos objectifs et vos contraintes.</p>
+          </li>
+          <li>
+            <span class="process-step-num">2</span>
+            <h3>Devis sous 48h</h3>
+            <p>Vous recevez un devis détaillé, chiffré et sans surprise — vous validez ce qui vous convient.</p>
+          </li>
+          <li>
+            <span class="process-step-num">3</span>
+            <h3>Livraison en 4–6 sem</h3>
+            <p>Maquette validée, intégration, tests, mise en ligne — vous gardez la main à chaque étape.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-                <!-- HERO SECTION -->
-                <section class="hero">
-                    <div class="hero-content">
-                        <p class="hero-tag">Aspiring Full-Stack Developer</p>
-                        <h1 class="hero-title">Salut, moi c'est Moussa.</h1>
-                        <p class="hero-subtitle">
-                            Je construis petit à petit mon parcours dans le développement web :
-                            HTML, CSS, JavaScript, React et plus encore. Mon objectif : devenir
-                            développeur full-stack et un jour travailler à New York.
-                        </p>
+    <section id="apropos">
+      <div class="about-container">
 
-                        <div class="hero-buttons">
-                            <a href="#projets" class="btn primary">Voir mes projets</a>
-                            <a href="#liens" class="btn secondary">Ressources que j'utilise</a>
-                        </div>
-                    </div>
-                </section>
+        <div class="about-text">
+          <span class="section-label">À propos</span>
+          <h2>Qui suis-je ?</h2>
 
-                <!-- SECTION À PROPOS EXISTANTE -->
-                <section class="card" id="apropos">
-                    <h2>À propos de moi</h2>
-                    <p id="apropos-texte">
-                        Je suis en train d'apprendre le développement web (front-end et back-end)
-                        pour devenir développeur full-stack et, plus tard, travailler à New York.
-                    </p>
-                    <button id="change-text-btn">Changer le texte</button>
-                </section>
+          <p>
+            Je suis Moussa WANE CAMARA, développeur web full stack en freelance.
+            Formé en autodidacte sur des projets concrets, je maîtrise le développement
+            front-end (HTML, CSS, JavaScript) et back-end (PHP POO, SQL), sans framework lourd —
+            pour des sites rapides, maintenables et vraiment adaptés à vos besoins.
+          </p>
 
+          <p>
+            Mon approche : écouter votre besoin, proposer une solution claire,
+            livrer un site qui fonctionne et que vous pouvez faire évoluer.
+            Que ce soit un site vitrine, un e-commerce ou une application sur mesure,
+            je vous accompagne du devis à la mise en ligne — et après.
+          </p>
 
-                                    <div class="cards-row">
-                                        <section class="card" id="preferences">
-                                            <h2>Mes préférences</h2>
-                                            <ul>
-                                                <li>Technologie</li>
-                                                <li>Sport</li>
-                                                <li>Voyager</li>
-                                            </ul>
-                                        </section>
+          <a href="#contact" class="btn btn-about">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Demander un devis
+          </a>
+        </div>
 
-                                        <section class="card" id="objectifs">
-                                            <h2>Mes objectifs</h2>
-                                            <ul>
-                                                <li>Devenir développeur full-stack en moins de 6 mois</li>
-                                                <li>Obtenir des certifications utiles</li>
-                                                <li>Construire un portfolio professionnel</li>
-                                            </ul>
-                                        </section>
+        <div class="about-visual">
 
-                                        <section class="card">
-                                            <h2>À propos de mon parcours</h2>
-                                            <p>
-                                                Je suis un développeur web en apprentissage, motivé et déterminé à construire mon avenir dans la tech.
-                                                J’apprends actuellement HTML, CSS, JavaScript, React et Node.js afin de devenir développeur full-stack.
-                                                Je vise à travailler sur des projets modernes et à développer mes compétences chaque jour.
-                                            </p>
-                                        </section>
-                                    </div>
+          <div class="about-profile-card">
+            <span class="profile-badge">Freelance web</span>
+            <h3>MWC</h3>
+            <p>Développement web moderne</p>
 
-                                        <!-- SECTION SKILLS -->
-                                        <section class="card" id="skills">
-                                            <h2>Compétences</h2>
-                                            <p>Voici les technologies que je suis en train d'apprendre :</p>
+            <div class="profile-tags">
+              <span>HTML/CSS</span>
+              <span>Responsive</span>
+              <span>PHP/SQL</span>
+            </div>
+          </div>
 
-                                            <div class="skills-list">
-                                                <span class="skill-tag">HTML</span>
-                                                <span class="skill-tag">CSS</span>
-                                                <span class="skill-tag">JavaScript</span>
-                                                <span class="skill-tag">React (début)</span>
-                                                <span class="skill-tag">Node.js (bientôt)</span>
-                                                <span class="skill-tag">Git / GitHub</span>
-                                            </div>
-                                        </section> 
+          <div class="about-card">
+            <h3><span class="card-icon" aria-hidden="true">🎓</span> Formation web</h3>
+            <p>Développement front-end et back-end pour créer des sites complets.</p>
+          </div>
 
+          <div class="about-card">
+            <h3><span class="card-icon" aria-hidden="true">🚀</span> Disponible en freelance</h3>
+            <p>Prestations claires, devis gratuit, accompagnement du brief à la mise en ligne.</p>
+          </div>
 
-                                         <section class="card" id="projets">
-                                        <h2>Mes projets</h2>
-                                        <p>Les projets que je développerai pendant ma formation seront affichés ici.</p>
+          <div class="about-card">
+            <h3><span class="card-icon" aria-hidden="true">📍</span> Vaucresson &amp; 92 ouest</h3>
+            <p>
+              Basé à Vaucresson (92), je travaille avec des TPE et artisans des Hauts-de-Seine
+              — Boulogne-Billancourt, Issy-les-Moulineaux, Garches, Saint-Cloud, Marnes-la-Coquette,
+              Clamart — en présentiel, ou à distance partout en France.
+            </p>
+          </div>
 
-                                        <!-- Projet 1 : Compteur -->
-                                        <h3>Projet 1 : Compteur</h3>
-                                        <div class="counter">
-                                            <p id="counter-value">0</p>
-                                            <button id="btn-plus">+1</button>
-                                            <button id="btn-minus">-1</button>
-                                            <button id="btn-reset">Reset</button>
-                                        </div>
+        </div>
 
-                                        <!-- Projet 2 : Convertisseur EUR → USD -->
-                                        <h3>Projet 2 : Convertisseur EUR → USD</h3>
-                                        <div class="convert">
-                                            <input type="number" id="eur-input" placeholder="Montant en EUR">
-                                            <button id="convert-btn">Convertir</button>
-                                            <p id="usd-result">Résultat : —</p>
-                                        </div>
+      </div>
+    </section>
 
-                                        <!-- Projet 3 : Générateur de citations -->
-                                        <h3>Projet 3 : Citation Motivante</h3>
-                                        <div class="quote-box">
-                                            <p id="quote-text">Clique pour obtenir une citation inspirante !</p>
-                                            <button id="quote-btn">Nouvelle citation</button>
-                                        </div>
+    <section id="competences">
+      <span class="section-label">Ma stack</span>
+      <h2>Les bons outils pour chaque besoin</h2>
+      <p class="stack-intro">
+        Pas de magie : chaque projet utilise les technologies adaptées à votre objectif business.
+        Voici comment je compose, selon votre besoin.
+      </p>
 
-                                        <h3>Projet 4 : Mini App Météo</h3>
+      <div class="stack-grid">
 
-                                <div class="meteo">
-                                    <input type="text" id="ville-input" placeholder="Entrez une ville">
-                                    <button id="meteo-btn">Afficher la météo</button>
+        <div class="stack-card">
+          <div class="stack-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+          <h3>Pour vos sites vitrines</h3>
+          <p>HTML5, CSS3 moderne, JavaScript vanilla. Site léger, rapide sur mobile, optimisé pour Google.</p>
+        </div>
 
-                                    <p id="meteo-resultat">En attente d'une ville...</p>
-                                </div>
+        <div class="stack-card">
+          <div class="stack-icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
+          <h3>Pour vos sites e-commerce</h3>
+          <p>WordPress + WooCommerce ou solution sur mesure avec Stripe. Paiement sécurisé, gestion des commandes.</p>
+        </div>
 
-                                <h3>Projet 5 : Statistiques sur des nombres</h3>
-                            <div class="stats">
-                                <p>On va calculer la somme et la moyenne de la liste : [5, 12, 8, 20, 3]</p>
-                                <button id="stats-btn">Calculer</button>
-                                <p id="stats-result">Résultat : —</p>
-                            </div>
+        <div class="stack-card">
+          <div class="stack-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+          <h3>Pour vos applications web</h3>
+          <p>PHP 8 en POO, base de données SQL/SQLite, sécurité HTTPS. Comme EcoRide : auth, espace admin, fonctionnalités sur mesure.</p>
+        </div>
 
-                                <h3>Projet React : Compteur (version React)</h3>
-                        <div id="react-counter-root"></div>
-                    </section>
+        <div class="stack-card">
+          <div class="stack-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+          <h3>Outils &amp; méthodes</h3>
+          <p>Git/GitHub pour le code, Figma pour les maquettes, Netlify/OVH pour l'hébergement, Google Analytics pour le suivi.</p>
+        </div>
 
+      </div>
 
+      <div class="stack-techs">
+        <p class="stack-techs-label">Technologies maîtrisées</p>
+        <ul class="stack-techs-list">
+          <li><i class="fa-brands fa-html5 html-icon" aria-hidden="true"></i> HTML5</li>
+          <li><i class="fa-brands fa-css3-alt css-icon" aria-hidden="true"></i> CSS3</li>
+          <li><i class="fa-brands fa-js js-icon" aria-hidden="true"></i> JavaScript</li>
+          <li><i class="fa-brands fa-php php-icon" aria-hidden="true"></i> PHP 8 (POO)</li>
+          <li><i class="fa-solid fa-database db-icon" aria-hidden="true"></i> SQL / SQLite</li>
+          <li><i class="fa-brands fa-git-alt git-icon" aria-hidden="true"></i> Git / GitHub</li>
+        </ul>
+      </div>
+    </section>
 
-                             <section class="card image-card" id="freelance">
-                            <h2>Mon rêve : devenir développeur freelance</h2>
-                            <img src="https://images.unsplash.com/photo-1517245386807-9b3f0b61f24c"
-                                width="250"
-                                alt="Bureau de développeur freelance">
-                            <p>
-                                Mon objectif est de devenir développeur web indépendant, pouvoir créer mes propres projets, 
-                                travailler d'où je veux, et bâtir un style de vie libre tout en développant mes compétences 
-                                dans le web et le logiciel.
-                            </p>
-                        </section>
+    <section id="projets">
+      <span class="section-label">Projets</span>
+      <h2>Mes projets récents</h2>
 
-                                    <section class="card" id="liens">
-                                        <h2>Liens utiles</h2>
-                                        <ul>
-                                            <li><a href="https://google.com" target="_blank">Google</a></li>
-                                            <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs</a></li>
-                                            <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
-                                        </ul>
-                                    </section>
+      <div class="projects-grid">
 
-                                </main>
+        <div class="project-card">
+          <a href="https://moussa.alwaysdata.net" target="_blank" rel="noopener noreferrer" class="project-image">
+            <img src="assets/images/ecoride.png" alt="Capture d'écran d'EcoRide — covoiturage écologique" loading="lazy">
+          </a>
+          <div class="project-content">
+            <h3>EcoRide — Plateforme de covoiturage 🌱</h3>
+            <p class="project-context">
+              <strong>Contexte :</strong> projet personnel pour démontrer ma capacité à livrer une application
+              web complète, de la conception au déploiement en production.
+            </p>
+            <p class="project-result">
+              <strong>Ce que j'ai livré :</strong> une application web complète avec espace utilisateur,
+              messagerie inter-membres, système de réservation, avis clients et tableau de bord administrateur.
+              Site déployé en production avec HTTPS et nom de domaine dédié.
+            </p>
+            <div class="project-tags">
+              <span>Application web</span>
+              <span>Espace utilisateur</span>
+              <span>Tableau de bord admin</span>
+              <span>HTTPS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://moussa.alwaysdata.net" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le site
+              </a>
+              <a href="https://github.com/Moussa-data/covoiturage-ecoride" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="color:#0f172a; border-color:#e2e8f0;">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> Code source
+              </a>
+            </div>
+          </div>
+        </div>
 
-                                <!-- React + ReactDOM + Babel (pour JSX) -->
-                <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-                <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-                <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <div class="project-card">
+          <a href="https://moussa-wane-camara.netlify.app" target="_blank" rel="noopener noreferrer" class="project-image">
+            <img src="assets/images/portfolio.png" alt="Capture d'écran du portfolio" loading="lazy">
+          </a>
+          <div class="project-content">
+            <h3>Portfolio personnel</h3>
+            <p class="project-context">
+              <strong>Contexte :</strong> outil commercial pour présenter mon activité freelance,
+              mes projets et permettre aux prospects de demander un devis en ligne.
+            </p>
+            <p class="project-result">
+              <strong>Ce que j'ai livré :</strong> site responsive, formulaire de devis intégré,
+              page de confirmation, notifications email automatiques via Netlify Forms.
+            </p>
+            <div class="project-tags">
+              <span>Site vitrine</span>
+              <span>Formulaire devis</span>
+              <span>Responsive</span>
+              <span>SEO de base</span>
+            </div>
+            <div class="project-links">
+              <a href="https://moussa-wane-camara.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le site
+              </a>
+            </div>
+          </div>
+        </div>
 
-                <!-- Code React pour le compteur -->
-                <script type="text/babel">
-                    function ReactCounter() {
-                        const [value, setValue] = React.useState(0);
+        <div class="project-card project-card-cta">
+          <div class="project-content project-cta-content">
+            <div class="project-cta-icon">
+              <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            </div>
+            <h3>Soyez le prochain projet</h3>
+            <p>
+              Mon prochain projet en production, c'est peut-être le vôtre.
+              Demandez un devis gratuit aujourd'hui et lancez votre site dans 4 à 6 semaines.
+            </p>
+            <a href="#contact" class="btn btn-primary project-cta-btn">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Demander un devis
+            </a>
+          </div>
+        </div>
 
-                        return (
-                            <div className="react-counter">
-                                <p className="react-counter-value">{value}</p>
-                                <div className="react-counter-buttons">
-                                    <button onClick={() => setValue(value + 1)}>+1</button>
-                                    <button onClick={() => setValue(value - 1)}>-1</button>
-                                    <button onClick={() => setValue(0)}>Reset</button>
-                                </div>
-                            </div>
-                        );
-                    }
+      </div>
+    </section>
 
-                    const rootElement = document.getElementById("react-counter-root");
-                    if (rootElement) {
-                        const root = ReactDOM.createRoot(rootElement);
-                        root.render(<ReactCounter />);
-                    }
-                </script>
+    <section id="services">
+      <span class="section-label">Services</span>
+      <h2>Ce que je peux faire pour vous</h2>
 
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-globe service-icon" aria-hidden="true"></i>
+          <h3>Site vitrine</h3>
+          <p>Présentez votre activité, attirez des clients en local. Responsive, formulaire de contact, SEO de base.</p>
+        </div>
 
-                                <footer class="footer">
-                            <p>© 2025 – Wane Camara Moussa. Tous droits réservés.</p>
-                            <p class="footer-small">Portfolio en cours d’apprentissage – HTML, CSS, JavaScript, React.</p>
-                        </footer>
+        <div class="service-card">
+          <i class="fa-solid fa-cart-shopping service-icon" aria-hidden="true"></i>
+          <h3>Site e-commerce</h3>
+          <p>Boutique en ligne pour vendre vos produits ou services, paiement sécurisé, gestion des commandes.</p>
+        </div>
 
+        <div class="service-card">
+          <i class="fa-solid fa-code service-icon" aria-hidden="true"></i>
+          <h3>Application web sur mesure</h3>
+          <p>Comme EcoRide : authentification, base de données, espace admin, fonctionnalités spécifiques à votre métier.</p>
+        </div>
 
-                                <!-- 🔥 JavaScript placé à la FIN, quand tout le HTML existe -->
+        <div class="service-card">
+          <i class="fa-solid fa-arrows-rotate service-icon" aria-hidden="true"></i>
+          <h3>Refonte de site</h3>
+          <p>Modernisation d'un site existant : design, performance, mobile, accessibilité.</p>
+        </div>
 
-                            <!-- 🔥 JavaScript maintenant dans un fichier séparé -->
-                            <script src="app.js"></script>
-                            </body>
-                            </html>
+        <div class="service-card">
+          <i class="fa-solid fa-screwdriver-wrench service-icon" aria-hidden="true"></i>
+          <h3>Maintenance &amp; évolutions</h3>
+          <p>Mises à jour régulières, ajout de pages, nouvelles fonctionnalités, sauvegardes.</p>
+        </div>
 
+        <div class="service-card">
+          <i class="fa-solid fa-bolt service-icon" aria-hidden="true"></i>
+          <h3>Correction &amp; optimisation</h3>
+          <p>Correction de bugs, amélioration du responsive, vitesse de chargement, SEO technique.</p>
+        </div>
+      </div>
+    </section>
 
+    <section id="tarifs">
+      <span class="section-label">Tarifs</span>
+      <h2>Des offres claires, sans surprise</h2>
+      <p class="tarifs-intro">
+        Tarifs HT indicatifs — un devis personnalisé est établi sous 48h après votre brief.
+      </p>
 
+      <div class="tarifs-grid">
+
+        <div class="tarif-card">
+          <div class="tarif-head">
+            <h3>Site vitrine essentiel</h3>
+            <p class="tarif-target">Pour artisans &amp; indépendants qui veulent une présence en ligne pro, rapidement.</p>
+          </div>
+          <div class="tarif-price">
+            <span class="tarif-price-label">À partir de</span>
+            <span class="tarif-price-amount">1 500 €</span>
+            <span class="tarif-price-suffix">HT</span>
+          </div>
+          <ul class="tarif-features">
+            <li><i class="fa-solid fa-check"></i> 3 à 4 pages (Accueil, Services, À propos, Contact)</li>
+            <li><i class="fa-solid fa-check"></i> Design adapté à votre activité</li>
+            <li><i class="fa-solid fa-check"></i> Formulaire de contact</li>
+            <li><i class="fa-solid fa-check"></i> Responsive mobile / tablette / desktop</li>
+            <li><i class="fa-solid fa-check"></i> Mise en ligne sur votre hébergement</li>
+            <li><i class="fa-solid fa-check"></i> 1 série de modifications incluse</li>
+            <li><i class="fa-solid fa-check"></i> Livraison en 3 à 4 semaines</li>
+          </ul>
+          <p class="tarif-notinc">
+            <strong>Non inclus</strong> — hébergement et nom de domaine, rédaction des contenus,
+            photos pro, formation longue, maintenance.
+          </p>
+          <a href="#contact" class="btn btn-primary tarif-cta">Demander un devis</a>
+        </div>
+
+        <div class="tarif-card tarif-card-featured">
+          <span class="tarif-badge">Le plus demandé</span>
+          <div class="tarif-head">
+            <h3>Refonte / Site vitrine pro</h3>
+            <p class="tarif-target">Pour TPE et associations qui veulent un site qui convertit, mis à jour facilement.</p>
+          </div>
+          <div class="tarif-price">
+            <span class="tarif-price-label">À partir de</span>
+            <span class="tarif-price-amount">2 800 €</span>
+            <span class="tarif-price-suffix">HT</span>
+          </div>
+          <ul class="tarif-features">
+            <li><i class="fa-solid fa-check"></i> 6 à 8 pages (+ blog / actus)</li>
+            <li><i class="fa-solid fa-check"></i> Design sur mesure adapté à votre image</li>
+            <li><i class="fa-solid fa-check"></i> Audit du site existant inclus (si refonte)</li>
+            <li><i class="fa-solid fa-check"></i> SEO local (méta-tags, sitemap, données structurées)</li>
+            <li><i class="fa-solid fa-check"></i> Hébergement &amp; nom de domaine 1<sup>ère</sup> année</li>
+            <li><i class="fa-solid fa-check"></i> Formation client (1h en visio)</li>
+            <li><i class="fa-solid fa-check"></i> 2 séries de modifications + garantie 1 mois</li>
+            <li><i class="fa-solid fa-check"></i> Livraison en 4 à 6 semaines</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary tarif-cta">Demander un devis</a>
+        </div>
+
+        <div class="tarif-card">
+          <div class="tarif-head">
+            <h3>Application web sur mesure</h3>
+            <p class="tarif-target">Pour un besoin spécifique : espace client, base de données, automatisation…</p>
+          </div>
+          <div class="tarif-price">
+            <span class="tarif-price-label">À partir de</span>
+            <span class="tarif-price-amount">4 500 €</span>
+            <span class="tarif-price-suffix">HT</span>
+          </div>
+          <ul class="tarif-features">
+            <li><i class="fa-solid fa-check"></i> Analyse de votre besoin métier</li>
+            <li><i class="fa-solid fa-check"></i> Architecture sur mesure (comme EcoRide)</li>
+            <li><i class="fa-solid fa-check"></i> Authentification, base de données, espace admin</li>
+            <li><i class="fa-solid fa-check"></i> Hébergement HTTPS sécurisé</li>
+            <li><i class="fa-solid fa-check"></i> Formation complète + documentation</li>
+            <li><i class="fa-solid fa-check"></i> Suivi technique post-livraison</li>
+            <li><i class="fa-solid fa-check"></i> Livraison en 6 à 10 semaines</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary tarif-cta">Discuter de mon projet</a>
+        </div>
+
+      </div>
+
+      <!-- Encart "Toujours inclus / Non inclus" — clarté & transparence -->
+      <div class="tarifs-included">
+        <div class="tarifs-included-col tarifs-included-yes">
+          <h3>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            Toujours inclus, dans toutes mes prestations
+          </h3>
+          <ul>
+            <li>Code propre, commenté et versionné sur GitHub</li>
+            <li>Site responsive (mobile, tablette, desktop)</li>
+            <li>HTTPS (certificat SSL) configuré</li>
+            <li>SEO de base (meta-tags, sitemap, Open Graph)</li>
+            <li>Mentions légales + politique de confidentialité (templates)</li>
+            <li>Garantie correction 1 mois après livraison</li>
+            <li>Documentation simple en français pour l'équipe client</li>
+            <li>Disponibilité par email pendant tout le projet</li>
+          </ul>
+        </div>
+
+        <div class="tarifs-included-col tarifs-included-no">
+          <h3>
+            <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+            Non inclus (à prévoir séparément)
+          </h3>
+          <ul>
+            <li>
+              <strong>Hébergement &amp; nom de domaine</strong>
+              — sauf mention contraire dans la formule (10-15 €/mois en moyenne)
+            </li>
+            <li>
+              <strong>Rédaction des contenus</strong>
+              — vos textes ou rédacteur web spécialisé
+            </li>
+            <li>
+              <strong>Photos professionnelles</strong>
+              — banques d'images libres ou photographe local
+            </li>
+            <li>
+              <strong>Maintenance régulière post-livraison</strong>
+              — forfait mensuel à 60 €/mois si besoin
+            </li>
+            <li>
+              <strong>Modifications majeures</strong> hors scope initial
+              — chiffrées en avenant si besoin
+            </li>
+            <li>
+              <strong>Stratégie marketing / publicité</strong>
+              — partenaires recommandés sur demande
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="tarifs-footnote">
+        💡 <strong>Première fois ?</strong> On commence par un appel gratuit
+        de 20 min pour comprendre votre besoin. Vous repartez avec un devis clair,
+        sans engagement, sous 48h.
+      </p>
+    </section>
+
+    <!-- ================================================================
+         FAQ — répond aux questions qui freinent l'envoi de devis (axe 6)
+         Utilise <details>/<summary> natifs HTML : 0 JS, accessibilité OK
+         ================================================================ -->
+    <section id="faq" class="faq-band">
+      <div class="faq-inner">
+        <span class="section-label">FAQ</span>
+        <h2>Questions fréquentes avant de demander un devis</h2>
+        <p class="faq-intro">
+          Les réponses aux questions que vous me posez avant chaque devis.
+          Si la vôtre n'est pas listée, écrivez-la dans le formulaire ci-dessous.
+        </p>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>
+              <span>Combien de temps faut-il pour livrer un site ?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Un site vitrine simple (3 à 5 pages) est livré en <strong>3 à 4 semaines</strong>
+              à partir de la validation de la maquette. Un site pro / refonte d'envergure
+              prend <strong>4 à 6 semaines</strong>, et une application web sur mesure
+              <strong>6 à 10 semaines</strong>. Les délais sont précisés dans le devis et
+              je m'y tiens.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>L'hébergement et le nom de domaine sont-ils inclus ?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Sur la formule <strong>Site vitrine pro</strong>, l'hébergement et le nom
+              de domaine sont inclus pour la 1<sup>ère</sup> année (puis ~80 €/an
+              à votre charge). Sur la formule essentielle, je vous installe le site
+              sur votre hébergement (compter 10-15 €/mois chez OVH, Hostinger ou Netlify).
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Comment ça se passe après la livraison ?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Vous avez <strong>1 mois de garantie correction</strong> pour signaler tout
+              bug ou ajustement. Au-delà, je propose un <strong>forfait maintenance
+              à 60 €/mois</strong> (sauvegardes, mises à jour de sécurité, petites
+              modifs régulières). Sans engagement — vous démarrez et arrêtez quand
+              vous voulez.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Puis-je modifier le site moi-même par la suite ?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Oui, je livre tous les codes sources et je forme votre équipe (1h en visio
+              incluse dans la formule pro). Pour les modifications de contenu courantes,
+              vous êtes autonome. Si la modif est plus technique, je peux la faire en
+              ponctuel (au tarif de 50 €/h).
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Acceptez-vous les paiements en plusieurs fois ?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Oui, pour les projets de plus de 1 500 € HT, je propose un paiement
+              en 3 fois sans frais : <strong>30 % à la signature</strong>,
+              <strong>40 % à la validation de la maquette</strong>,
+              <strong>30 % à la livraison</strong>. Pour les projets associatifs
+              ou les petites structures, on peut adapter selon votre situation.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Travaillez-vous uniquement avec des clients du 92 ?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Non — je suis basé à Vaucresson (92), je rencontre volontiers les
+              clients locaux en présentiel (Boulogne, Issy, Garches, Saint-Cloud…),
+              mais je travaille avec des clients <strong>partout en France</strong>
+              en visio. Les outils modernes (Figma, GitHub, Slack) rendent ça
+              parfaitement fluide.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <span class="section-label">Devis</span>
+      <h2>Demander un devis</h2>
+
+      <p class="contact-intro">Devis gratuit, sans engagement. Réponse sous 24h.</p>
+
+      <div class="contact-container">
+
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> m.wanecamara@gmail.com</p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> 06 05 66 61 90</p>
+          <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vaucresson (92), France</p>
+          <p class="contact-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            Plus vous me donnez d'infos sur votre projet, plus je peux vous répondre précisément.
+          </p>
+        </div>
+
+        <form class="contact-form" name="devis" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="devis">
+          <p class="hp-field" hidden><label>Ne pas remplir : <input id="bot-field" name="bot-field" aria-label="Ne pas remplir (champ anti-spam)" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="devis-name">Nom <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="devis-name" name="name" placeholder="Prénom Nom" required autocomplete="name">
+            </div>
+
+            <div class="form-row">
+              <label for="devis-email">Email <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="devis-email" name="email" placeholder="vous@exemple.com" required autocomplete="email">
+            </div>
+
+            <div class="form-row">
+              <label for="devis-phone">Téléphone <span class="optional">(optionnel)</span></label>
+              <input type="tel" id="devis-phone" name="phone" placeholder="06 12 34 56 78" autocomplete="tel" pattern="[0-9\s().+-]{6,}">
+            </div>
+
+            <div class="form-row">
+              <label for="devis-project-type">Type de projet <span class="required" aria-hidden="true">*</span></label>
+              <select id="devis-project-type" name="project_type" required>
+                <option value="" disabled selected>— Choisir —</option>
+                <option value="Site vitrine">Site vitrine</option>
+                <option value="Site e-commerce">Site e-commerce</option>
+                <option value="Refonte de site existant">Refonte de site existant</option>
+                <option value="Application web sur mesure">Application web sur mesure</option>
+                <option value="Maintenance / évolution">Maintenance / évolution</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="devis-budget">Budget estimé <span class="required" aria-hidden="true">*</span></label>
+              <select id="devis-budget" name="budget" required>
+                <option value="" disabled selected>— Choisir —</option>
+                <option value="Moins de 2 000 €">Moins de 2 000 €</option>
+                <option value="2 000 € – 5 000 €">2 000 € – 5 000 €</option>
+                <option value="5 000 € – 10 000 €">5 000 € – 10 000 €</option>
+                <option value="Plus de 10 000 €">Plus de 10 000 €</option>
+                <option value="À discuter">À discuter</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="devis-deadline">Délai souhaité</label>
+              <select id="devis-deadline" name="deadline">
+                <option value="" disabled selected>— Choisir —</option>
+                <option value="Urgent (moins d'1 mois)">Urgent (moins d'1 mois)</option>
+                <option value="1 à 3 mois">1 à 3 mois</option>
+                <option value="3 à 6 mois">3 à 6 mois</option>
+                <option value="Plus de 6 mois">Plus de 6 mois</option>
+                <option value="Pas de contrainte">Pas de contrainte</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="devis-message">Description du projet <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="devis-message" name="message" placeholder="Décrivez votre activité, vos objectifs, ce que le site devra faire, vos contraintes éventuelles, des exemples de sites que vous aimez…" required minlength="20"></textarea>
+          </div>
+
+          <button type="submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Envoyer ma demande de devis
+          </button>
+
+          <p class="form-footer">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            Vos informations restent confidentielles — utilisées uniquement pour vous répondre.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Moussa WANE CAMARA. Tous droits réservés.</p>
+    <p class="footer-links">
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <span aria-hidden="true">·</span>
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    </p>
+
+    <p class="footer-tagline">
+      Fait avec <i class="fa-solid fa-heart" aria-hidden="true" style="color:#e24b4a"></i>
+      et <i class="fa-solid fa-code" aria-hidden="true"></i> code
+    </p>
+
+    <div class="footer-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

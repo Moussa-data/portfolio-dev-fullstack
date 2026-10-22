@@ -1,0 +1,17 @@
+# Netlify Headers — fichier reconnu automatiquement à la racine du site
+#
+# Doc : https://docs.netlify.com/routing/headers/
+#
+# /* signifie "appliquer à toutes les URL".
+# Une ligne par header, indentée de 2 espaces.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  # HSTS est déjà géré par Netlify, on n'a pas besoin de le redéclarer ici.
+
+# Cache long pour les assets versionnés (images, CSS, JS, polices)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
