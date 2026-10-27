@@ -13,7 +13,7 @@ There is nothing to install or build. To preview:
 - Open `index.html` directly in a browser, or
 - Serve the directory with any static server (e.g. `python3 -m http.server`) and visit the printed URL.
 
-`react-test.html` is a standalone sandbox page (separate from the main portfolio) used to experiment with a minimal React counter via Babel-in-the-browser. It is not linked from `index.html`.
+Fonts (`assets/fonts/`) and Font Awesome (`assets/vendor/fontawesome/`) are self-hosted on purpose: do not load anything from Google Fonts, cdnjs, unpkg or other third-party CDNs (RGPD — visitors' IP addresses must not leak to third parties).
 
 ## Architecture
 

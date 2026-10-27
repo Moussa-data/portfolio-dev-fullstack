@@ -2084,3 +2084,6 @@ footer .logo-mark { width: 36px; height: 36px; }
 }
 
 .legal-page h2 { text-align: left; font-size: 1.35rem; }
+
+/* Lien vers la politique de confidentialité sous le formulaire de devis */
+.form-footer a { color: var(--primary); text-decoration: underline; }
