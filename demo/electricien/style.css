@@ -1,0 +1,308 @@
+/* =============================================================
+   Atelier Ampère — site vitrine de démonstration
+   Thèmes : clair (béton) et sombre (tableau de nuit)
+   Couleurs inspirées des fils électriques : phase (marron),
+   neutre (bleu), terre (vert/jaune) + jaune « sécurité ».
+   ============================================================= */
+
+@font-face { font-family: "Barlow Condensed"; src: url("polices/barlow-condensed-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("polices/barlow-condensed-latin-800-normal.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("polices/barlow-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("polices/barlow-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("polices/barlow-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+:root,
+[data-theme="clair"] {
+  --fond: #E7EAED;          /* béton */
+  --fond-alt: #DDE1E5;
+  --surface: #F6F7F8;
+  --encre: #14171B;
+  --texte: #2B3138;
+  --texte-doux: #56606B;
+  --trait: #C5CBD2;
+  --jaune: #FFC21A;
+  --jaune-texte: #7A5600;   /* jaune lisible sur fond clair */
+  --neutre: #2F6FDB;
+  --phase: #8B5A2B;
+  --terre: #3E9B4F;
+  --boitier: #FBFBFA;       /* plastique du disjoncteur */
+  --rail: #B9C0C8;
+  --etiquette: #14171B;
+  --etiquette-texte: #F6F7F8;
+  --ombre-module: 0 1px 0 rgba(20, 23, 27, .08), 0 3px 8px rgba(20, 23, 27, .08);
+  color-scheme: light;
+}
+
+[data-theme="sombre"] {
+  --fond: #101215;
+  --fond-alt: #15181C;
+  --surface: #1B1F24;
+  --encre: #F1F3F5;
+  --texte: #D5DAE0;
+  --texte-doux: #9AA3AE;
+  --trait: #2C3239;
+  --jaune: #FFC93C;
+  --jaune-texte: #FFC93C;
+  --neutre: #6C9BF0;
+  --phase: #C08552;
+  --terre: #5DBB6D;
+  --boitier: #262B31;
+  --rail: #3A4148;
+  --etiquette: #F1F3F5;
+  --etiquette-texte: #101215;
+  --ombre-module: 0 1px 0 rgba(0, 0, 0, .4);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .25s, color .25s;
+}
+img, svg { display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--jaune); outline-offset: 3px; border-radius: 4px; }
+
+.conteneur { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; color: var(--encre); margin: 0; line-height: 1.05; }
+h1 { font-size: clamp(2.8rem, 7vw, 5.2rem); font-weight: 800; letter-spacing: -.01em; max-width: 15ch; }
+h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; }
+h3 { font-size: 1.35rem; font-weight: 600; }
+
+/* ---------- Bandeau de démonstration ---------- */
+.bandeau-demo { background: var(--encre); color: var(--fond); font-size: .88rem; }
+.bandeau-demo p { margin: 0; padding: 8px 24px; text-align: center; }
+.bandeau-demo a { color: var(--jaune); font-weight: 600; }
+
+/* ---------- En-tête ---------- */
+.entete {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--fond) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--trait);
+}
+.entete-ligne { display: flex; align-items: center; gap: 24px; height: 68px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.45rem; color: var(--encre); }
+.logo svg { width: 28px; height: 28px; }
+.logo svg rect:first-child { fill: var(--encre); }
+.logo .logo-manette { fill: var(--jaune); }
+.nav { display: flex; gap: 26px; margin-left: auto; }
+.nav a { text-decoration: none; font-weight: 500; color: var(--texte-doux); }
+.nav a:hover { color: var(--encre); }
+.entete-actions { display: flex; align-items: center; gap: 12px; }
+
+.bouton-theme {
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--trait); background: var(--surface); color: var(--encre);
+  display: grid; place-items: center; cursor: pointer;
+}
+.bouton-theme svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.bouton-theme .icone-lune { fill: currentColor; stroke: none; }
+[data-theme="clair"] .icone-soleil, [data-theme="sombre"] .icone-lune { display: none; }
+
+/* ---------- Boutons ---------- */
+.bouton {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 22px; border-radius: 8px;
+  font-weight: 600; text-decoration: none; font-size: 1rem;
+  border: 2px solid transparent; cursor: pointer; font-family: inherit;
+  transition: transform .1s, background-color .15s;
+}
+.bouton:active { transform: translateY(1px); }
+.bouton svg { width: 18px; height: 18px; fill: currentColor; }
+.bouton-plein { background: var(--encre); color: var(--fond); }
+.bouton-plein:hover { background: color-mix(in srgb, var(--encre) 85%, var(--jaune)); }
+.bouton-contour { border-color: var(--encre); color: var(--encre); }
+.bouton-contour:hover { background: var(--surface); }
+.bouton-jaune { background: var(--jaune); color: #14171B; }
+.bouton-jaune:hover { background: #FFD14F; }
+.bouton-appel { padding: 10px 16px; font-variant-numeric: tabular-nums; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 72px 0 88px; overflow: hidden; }
+.hero-grille { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 24px; }
+.hero-lieu { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; font-weight: 500; color: var(--texte-doux); }
+.voyant { width: 10px; height: 10px; border-radius: 50%; background: var(--terre); box-shadow: 0 0 0 4px color-mix(in srgb, var(--terre) 22%, transparent); }
+.hero-sous { font-size: 1.2rem; max-width: 52ch; margin: 22px 0 30px; color: var(--texte); }
+.hero-boutons { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-preuves { list-style: none; padding: 0; margin: 44px 0 0; display: flex; flex-wrap: wrap; gap: 14px 36px; color: var(--texte-doux); }
+.hero-preuves strong { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 2rem; font-weight: 800; color: var(--encre); line-height: 1; }
+
+.hero-fils svg { width: 100%; height: auto; max-height: 420px; margin-right: -24px; }
+.fil, .fil-terre { fill: none; stroke-width: 14; stroke-linecap: round; }
+.fil-phase { stroke: var(--phase); }
+.fil-neutre { stroke: var(--neutre); }
+.fil-terre-fond { stroke: #E9C81E; }              /* terre : jaune… */
+.fil-terre { stroke: var(--terre); stroke-dasharray: 22 22; stroke-linecap: butt; } /* …rayé de vert */
+.bornier { fill: var(--boitier); stroke: var(--trait); stroke-width: 2; }
+.vis { fill: var(--trait); }
+
+/* Une seule animation : les fils se « branchent » au chargement */
+@media (prefers-reduced-motion: no-preference) {
+  .fil { stroke-dasharray: 600; stroke-dashoffset: 600; animation: branchement 1.4s cubic-bezier(.22, .61, .36, 1) forwards; }
+  .fil-neutre { animation-delay: .15s; }
+  .fil-terre-fond { animation-delay: .3s; }
+  .fil-terre { opacity: 0; animation: apparition .4s 1.5s forwards; }
+  @keyframes branchement { to { stroke-dashoffset: 0; } }
+  @keyframes apparition { to { opacity: 1; } }
+}
+
+/* ---------- Sections ---------- */
+.section { padding: 88px 0; }
+.section-alt { background: var(--fond-alt); }
+.section-intro { max-width: 60ch; color: var(--texte-doux); margin: 12px 0 0; font-size: 1.1rem; }
+
+/* ---------- Le tableau électrique ---------- */
+.tableau {
+  margin-top: 40px;
+  background: var(--surface);
+  border: 1px solid var(--trait);
+  border-radius: 14px;
+  padding: 34px 28px 28px;
+}
+.tableau-rail {
+  display: flex; gap: 6px; overflow-x: auto; padding: 0 2px 10px;
+  position: relative;
+}
+/* le rail DIN métallique derrière les modules */
+.tableau-rail::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 26px; transform: translateY(-50%);
+  background: repeating-linear-gradient(90deg, var(--rail) 0 22px, color-mix(in srgb, var(--rail) 70%, transparent) 22px 26px);
+  border-radius: 3px; z-index: 0;
+}
+.module {
+  position: relative; z-index: 1; flex: 1 1 0;
+  min-width: 100px; max-width: 150px; height: 220px;
+  background: var(--boitier); border: 1px solid var(--trait); border-radius: 6px;
+  box-shadow: var(--ombre-module);
+  display: grid; grid-template-rows: 54px 1fr 20px 22px; justify-items: center; align-items: center;
+  padding: 10px 8px 8px; cursor: pointer; font-family: inherit; color: var(--texte);
+}
+.etiquette {
+  align-self: start; width: 100%;
+  background: var(--etiquette); color: var(--etiquette-texte);
+  font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: .98rem; line-height: 1.1;
+  padding: 6px 4px; border-radius: 3px; text-align: center;
+  min-height: 42px; display: grid; place-items: center;
+}
+.module-corps {
+  width: 40px; height: 86px; border-radius: 6px;
+  background: color-mix(in srgb, var(--encre) 10%, var(--boitier));
+  position: relative;
+}
+.manette {
+  position: absolute; left: 4px; right: 4px; height: 38px; bottom: 4px;
+  background: var(--encre); border-radius: 4px;
+  transition: bottom .18s cubic-bezier(.3, 1.4, .5, 1), background-color .18s;
+}
+.module[aria-pressed="true"] .manette { bottom: 44px; background: var(--jaune); }
+.module-voyant { width: 9px; height: 9px; border-radius: 50%; background: var(--trait); transition: background-color .18s, box-shadow .18s; }
+.module[aria-pressed="true"] .module-voyant { background: var(--terre); box-shadow: 0 0 8px var(--terre); }
+.module-calibre { font-size: .78rem; color: var(--texte-doux); font-variant-numeric: tabular-nums; }
+.module:hover .module-corps { background: color-mix(in srgb, var(--encre) 16%, var(--boitier)); }
+
+.detail {
+  margin-top: 22px; padding: 24px 26px;
+  border-left: 5px solid var(--jaune);
+  background: var(--fond);
+  border-radius: 0 10px 10px 0;
+  min-height: 170px;
+}
+.detail-titre { font-size: 1.8rem; font-weight: 800; }
+.detail-texte { margin: 10px 0 18px; max-width: 64ch; }
+.detail-infos { display: flex; flex-wrap: wrap; gap: 10px 40px; margin: 0; }
+.detail-infos dt { font-size: .85rem; color: var(--texte-doux); }
+.detail-infos dd { margin: 0; font-weight: 600; color: var(--encre); }
+
+/* ---------- Zone ---------- */
+.zone-grille { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+.communes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.communes li { padding: 8px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--trait); font-weight: 500; }
+.communes .commune-base { background: var(--encre); color: var(--fond); border-color: var(--encre); }
+
+/* ---------- Étapes ---------- */
+.etapes { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: none; }
+.etapes li { padding: 0 24px 0 0; position: relative; }
+.etapes li::before { content: ""; position: absolute; top: 22px; left: 52px; right: 0; height: 3px; background: var(--trait); }
+.etapes li:last-child::before { display: none; }
+.etape-num {
+  position: relative; z-index: 1;
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--jaune); color: #14171B;
+  font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.5rem;
+}
+.etapes h3 { margin: 18px 0 8px; }
+.etapes p { margin: 0; color: var(--texte-doux); }
+
+/* ---------- Garanties ---------- */
+.garanties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.garantie { padding: 4px 28px; border-left: 3px solid var(--encre); }
+.garantie p { color: var(--texte-doux); margin: 8px 0 0; }
+
+/* ---------- Devis ---------- */
+.devis-grille { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
+.devis-urgence { margin-top: 30px; padding: 20px 22px; border-radius: 10px; background: var(--surface); border: 1px solid var(--trait); }
+.devis-urgence p { margin: 0 0 14px; }
+.formulaire {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px;
+  background: var(--surface); border: 1px solid var(--trait); border-radius: 14px; padding: 28px;
+}
+.devis-grille > *, .formulaire > * { min-width: 0; }
+.champ { display: flex; flex-direction: column; gap: 6px; }
+.champ-large { grid-column: 1 / -1; }
+.champ label { font-weight: 600; font-size: .95rem; color: var(--encre); }
+.champ input, .champ select, .champ textarea {
+  font: inherit; color: var(--encre);
+  background: var(--fond); border: 1px solid var(--trait); border-radius: 8px;
+  padding: 11px 12px;
+  width: 100%; min-width: 0;
+}
+.champ textarea { resize: vertical; }
+.champ input[type="file"] { padding: 9px; }
+.champ input:focus, .champ select:focus, .champ textarea:focus { outline: 3px solid color-mix(in srgb, var(--jaune) 70%, transparent); outline-offset: 0; border-color: var(--encre); }
+.champ.a-erreur input { border-color: #C2410C; }
+.champ-erreur { color: #C2410C; font-size: .88rem; min-height: 1em; }
+[data-theme="sombre"] .champ-erreur { color: #FB923C; }
+.formulaire-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.formulaire-note { margin: 0; font-size: .88rem; color: var(--texte-doux); }
+.formulaire-merci { margin: 0; padding: 14px 16px; border-radius: 8px; background: color-mix(in srgb, var(--terre) 16%, var(--surface)); color: var(--encre); font-weight: 500; }
+
+/* ---------- Pied ---------- */
+.pied { border-top: 1px solid var(--trait); padding: 28px 0; font-size: .95rem; color: var(--texte-doux); }
+.pied-ligne { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.pied p { margin: 0; }
+.pied a { color: var(--encre); font-weight: 600; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero-grille, .zone-grille, .devis-grille { grid-template-columns: 1fr; }
+  .hero-fils { display: none; }
+  .etapes { grid-template-columns: 1fr 1fr; gap: 36px 0; }
+  .etapes li:nth-child(2)::before { display: none; }
+  .garanties { grid-template-columns: 1fr; gap: 26px; }
+}
+@media (max-width: 680px) {
+  .nav { display: none; }
+  .entete-actions { margin-left: auto; }
+  .bouton-appel span { display: none; }
+  .bouton-appel { padding: 11px; }
+  .hero { padding: 48px 0 64px; }
+  .section { padding: 64px 0; }
+  .etapes { grid-template-columns: 1fr; }
+  .etapes li::before { display: none; }
+  .formulaire { grid-template-columns: 1fr; padding: 20px; }
+  .tableau { padding: 26px 14px 18px; }
+  .module { min-width: 92px; height: 200px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}

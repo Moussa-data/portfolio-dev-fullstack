@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Ampère — Électricien à Vaucresson (site de démonstration)</title>
+  <meta name="description" content="Site vitrine de démonstration pour un électricien fictif à Vaucresson : dépannage, mise aux normes, rénovation, bornes de recharge. Conçu par Moussa Wane Camara.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='2' width='18' height='20' rx='3' fill='%2314171B'/><rect x='9' y='6' width='6' height='7' rx='1' fill='%23FFC21A'/></svg>">
+
+  <!-- Thème appliqué AVANT l'affichage, pour éviter un flash blanc en mode sombre -->
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('ampere-theme'); } catch (e) {}
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'sombre' : 'clair';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+  <!-- Bandeau d'honnêteté : c'est un projet de portfolio, pas une vraie entreprise -->
+  <div class="bandeau-demo">
+    <p>Site de démonstration : Atelier Ampère est une entreprise fictive. Conçu et codé par
+      <a href="/">Moussa Wane Camara</a>, développeur web freelance.</p>
+  </div>
+
+  <header class="entete">
+    <div class="conteneur entete-ligne">
+      <a href="#haut" class="logo" aria-label="Atelier Ampère, retour en haut">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="2" width="18" height="20" rx="3"/><rect class="logo-manette" x="9" y="6" width="6" height="7" rx="1"/></svg>
+        <span>Atelier Ampère</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#zone">Zone</a>
+        <a href="#methode">Méthode</a>
+        <a href="#devis">Devis</a>
+      </nav>
+
+      <div class="entete-actions">
+        <button type="button" class="bouton-theme" id="boutonTheme" aria-label="Passer en mode sombre">
+          <svg class="icone-lune" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+          <svg class="icone-soleil" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+        </button>
+        <a href="tel:+33100000000" class="bouton bouton-jaune bouton-appel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          <span>01 00 00 00 00</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="haut">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="conteneur hero-grille">
+        <div class="hero-texte">
+          <p class="hero-lieu"><span class="voyant" aria-hidden="true"></span> Électricien à Vaucresson · Hauts-de-Seine</p>
+          <h1>Votre électricité, faite proprement.</h1>
+          <p class="hero-sous">Dépannage, mise aux normes, rénovation et bornes de recharge dans l'ouest parisien. Un seul interlocuteur, du diagnostic à l'attestation Consuel.</p>
+          <div class="hero-boutons">
+            <a href="#devis" class="bouton bouton-plein">Demander un devis gratuit</a>
+            <a href="tel:+33100000000" class="bouton bouton-contour">Panne ? Appelez-nous</a>
+          </div>
+          <ul class="hero-preuves">
+            <li><strong>24 h</strong> pour un dépannage en semaine</li>
+            <li><strong>48 h</strong> pour recevoir votre devis</li>
+            <li><strong>10 ans</strong> de garantie décennale</li>
+          </ul>
+        </div>
+
+        <!-- Les trois fils d'une installation : phase, neutre, terre -->
+        <div class="hero-fils" aria-hidden="true">
+          <svg viewBox="0 0 400 420" preserveAspectRatio="xMidYMid meet">
+            <path class="fil fil-phase"  d="M400 70 C 260 70, 250 210, 120 210 L 40 210"/>
+            <path class="fil fil-neutre" d="M400 150 C 290 150, 280 240, 120 240 L 40 240"/>
+            <path class="fil fil-terre-fond" d="M400 330 C 260 330, 250 270, 120 270 L 40 270"/>
+            <path class="fil-terre" d="M400 330 C 260 330, 250 270, 120 270 L 40 270"/>
+            <rect class="bornier" x="20" y="190" width="44" height="100" rx="6"/>
+            <circle class="vis" cx="42" cy="210" r="6"/><circle class="vis" cx="42" cy="240" r="6"/><circle class="vis" cx="42" cy="270" r="6"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES : le tableau électrique ================= -->
+    <section class="section" id="services">
+      <div class="conteneur">
+        <h2>Nos services</h2>
+        <p class="section-intro">Comme sur un tableau électrique, chaque circuit a son rôle. Basculez un disjoncteur pour voir le détail.</p>
+
+        <div class="tableau">
+          <div class="tableau-rail" role="group" aria-label="Services">
+            <button type="button" class="module" data-service="depannage" aria-pressed="true" aria-controls="detailService">
+              <span class="etiquette">Dépannage</span>
+              <span class="module-corps"><span class="manette"></span></span>
+              <span class="module-voyant" aria-hidden="true"></span>
+              <span class="module-calibre" aria-hidden="true">C16</span>
+            </button>
+            <button type="button" class="module" data-service="normes" aria-pressed="false" aria-controls="detailService">
+              <span class="etiquette">Mise aux normes</span>
+              <span class="module-corps"><span class="manette"></span></span>
+              <span class="module-voyant" aria-hidden="true"></span>
+              <span class="module-calibre" aria-hidden="true">C20</span>
+            </button>
+            <button type="button" class="module" data-service="renovation" aria-pressed="false" aria-controls="detailService">
+              <span class="etiquette">Rénovation</span>
+              <span class="module-corps"><span class="manette"></span></span>
+              <span class="module-voyant" aria-hidden="true"></span>
+              <span class="module-calibre" aria-hidden="true">C20</span>
+            </button>
+            <button type="button" class="module" data-service="borne" aria-pressed="false" aria-controls="detailService">
+              <span class="etiquette">Borne de recharge</span>
+              <span class="module-corps"><span class="manette"></span></span>
+              <span class="module-voyant" aria-hidden="true"></span>
+              <span class="module-calibre" aria-hidden="true">C32</span>
+            </button>
+            <button type="button" class="module" data-service="eclairage" aria-pressed="false" aria-controls="detailService">
+              <span class="etiquette">Éclairage</span>
+              <span class="module-corps"><span class="manette"></span></span>
+              <span class="module-voyant" aria-hidden="true"></span>
+              <span class="module-calibre" aria-hidden="true">C10</span>
+            </button>
+            <button type="button" class="module" data-service="domotique" aria-pressed="false" aria-controls="detailService">
+              <span class="etiquette">Domotique</span>
+              <span class="module-corps"><span class="manette"></span></span>
+              <span class="module-voyant" aria-hidden="true"></span>
+              <span class="module-calibre" aria-hidden="true">C10</span>
+            </button>
+          </div>
+
+          <div class="detail" id="detailService" aria-live="polite">
+            <!-- Rempli par app.js ; contenu par défaut si JavaScript est désactivé -->
+            <h3 class="detail-titre">Dépannage</h3>
+            <p class="detail-texte">Plus de courant, disjoncteur qui saute, prise qui chauffe : on trouve la cause et on répare, sans vous vendre ce dont vous n'avez pas besoin.</p>
+            <dl class="detail-infos">
+              <div><dt>Délai</dt><dd>sous 24 h en semaine</dd></div>
+              <div><dt>Tarif</dt><dd>déplacement + diagnostic dès 69 € TTC</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ZONE ================= -->
+    <section class="section section-alt" id="zone">
+      <div class="conteneur zone-grille">
+        <div>
+          <h2>Zone d'intervention</h2>
+          <p class="section-intro">Basés à Vaucresson, nous intervenons dans un rayon de 20 minutes. Pour une borne de recharge ou une rénovation complète, nous nous déplaçons plus loin sur devis.</p>
+        </div>
+        <ul class="communes">
+          <li class="commune-base">Vaucresson</li>
+          <li>Garches</li><li>Marnes-la-Coquette</li><li>Saint-Cloud</li><li>Ville-d'Avray</li>
+          <li>Sèvres</li><li>Chaville</li><li>Rueil-Malmaison</li><li>Suresnes</li>
+          <li>Boulogne-Billancourt</li><li>Le Chesnay-Rocquencourt</li><li>Versailles</li>
+          <li>La Celle-Saint-Cloud</li><li>Bougival</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= MÉTHODE (vraie séquence : numérotée) ================= -->
+    <section class="section" id="methode">
+      <div class="conteneur">
+        <h2>Comment ça se passe</h2>
+        <ol class="etapes">
+          <li>
+            <span class="etape-num">1</span>
+            <h3>Vous nous appelez</h3>
+            <p>Ou vous remplissez le formulaire, avec une photo du problème si possible. On vous rappelle dans la journée.</p>
+          </li>
+          <li>
+            <span class="etape-num">2</span>
+            <h3>Visite et diagnostic</h3>
+            <p>On vient voir l'installation, on teste, et on vous explique simplement ce qui se passe.</p>
+          </li>
+          <li>
+            <span class="etape-num">3</span>
+            <h3>Devis ferme</h3>
+            <p>Un prix fixé à l'avance, détaillé ligne par ligne. Pas de surprise sur la facture.</p>
+          </li>
+          <li>
+            <span class="etape-num">4</span>
+            <h3>Travaux et attestation</h3>
+            <p>Chantier propre, rangé chaque soir. À la fin, vous recevez l'attestation de conformité.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= GARANTIES ================= -->
+    <section class="section section-alt">
+      <div class="conteneur garanties">
+        <div class="garantie">
+          <h3>Habilitation électrique</h3>
+          <p>Interventions réalisées par des électriciens habilités, selon la norme NF C 15-100.</p>
+        </div>
+        <div class="garantie">
+          <h3>Installateur de bornes</h3>
+          <p>Qualification nécessaire pour poser une borne de plus de 3,7 kW et ouvrir droit aux aides.</p>
+        </div>
+        <div class="garantie">
+          <h3>Assurance décennale</h3>
+          <p>Vos travaux sont couverts pendant 10 ans. L'attestation est jointe à chaque devis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEVIS ================= -->
+    <section class="section" id="devis">
+      <div class="conteneur devis-grille">
+        <div class="devis-texte">
+          <h2>Demander un devis</h2>
+          <p class="section-intro">Décrivez votre besoin en quelques lignes. Une photo du tableau électrique nous aide souvent à vous répondre plus vite.</p>
+          <div class="devis-urgence">
+            <p><strong>Urgence ?</strong> Ne remplissez pas le formulaire, appelez directement.</p>
+            <a href="tel:+33100000000" class="bouton bouton-jaune">01 00 00 00 00</a>
+          </div>
+        </div>
+
+        <form class="formulaire" id="formulaireDevis" novalidate>
+          <div class="champ">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required>
+            <span class="champ-erreur" id="erreur-nom"></span>
+          </div>
+          <div class="champ">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel" required>
+            <span class="champ-erreur" id="erreur-telephone"></span>
+          </div>
+          <div class="champ">
+            <label for="commune">Commune</label>
+            <input type="text" id="commune" name="commune" list="liste-communes" autocomplete="address-level2" required>
+            <datalist id="liste-communes">
+              <option value="Vaucresson"><option value="Garches"><option value="Saint-Cloud"><option value="Sèvres"><option value="Rueil-Malmaison"><option value="Versailles">
+            </datalist>
+            <span class="champ-erreur" id="erreur-commune"></span>
+          </div>
+          <div class="champ">
+            <label for="travaux">Type de travaux</label>
+            <select id="travaux" name="travaux">
+              <option value="depannage">Dépannage</option>
+              <option value="normes">Mise aux normes</option>
+              <option value="renovation">Rénovation</option>
+              <option value="borne">Borne de recharge</option>
+              <option value="eclairage">Éclairage</option>
+              <option value="domotique">Domotique</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="champ champ-large">
+            <label for="message">Votre besoin</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ex. : le disjoncteur saute dès qu'on lance le four et le lave-linge en même temps."></textarea>
+          </div>
+          <div class="champ champ-large">
+            <label for="photo">Photo (facultatif)</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+          </div>
+          <div class="champ-large formulaire-bas">
+            <button type="submit" class="bouton bouton-plein">Envoyer ma demande</button>
+            <p class="formulaire-note">Démonstration : le formulaire vérifie les champs mais n'envoie rien.</p>
+          </div>
+          <p class="formulaire-merci champ-large" id="merci" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur pied-ligne">
+      <p><strong>Atelier Ampère</strong> · entreprise fictive, site de démonstration.</p>
+      <p>Conception et code : <a href="/">Moussa Wane Camara</a>, développeur web freelance à Vaucresson.</p>
+    </div>
+  </footer>
+
+  <script src="app.js?v=1"></script>
+</body>
+</html>
