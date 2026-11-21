@@ -6,7 +6,7 @@
   <title>Atelier Ampère — Électricien à Vaucresson (site de démonstration)</title>
   <meta name="description" content="Site vitrine de démonstration pour un électricien fictif à Vaucresson : dépannage, mise aux normes, rénovation, bornes de recharge. Conçu par Moussa Wane Camara.">
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='2' width='18' height='20' rx='3' fill='%232459FF'/><rect x='9' y='6' width='6' height='7' rx='1' fill='%23FFC21A'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='2' width='18' height='20' rx='3' fill='%231B3FD1'/><rect x='9' y='6' width='6' height='7' rx='1' fill='%23FFC21A'/></svg>">
 
   <!-- Thème appliqué AVANT l'affichage, pour éviter un flash blanc en mode sombre -->
   <script>
@@ -17,7 +17,7 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -88,62 +88,68 @@
       </div>
     </section>
 
-    <!-- ================= SERVICES : le tableau électrique ================= -->
+    <!-- ================= SERVICES : cartes avec icônes ================= -->
     <section class="section" id="services">
       <div class="conteneur">
         <h2>Nos services</h2>
-        <p class="section-intro">Comme sur un tableau électrique, chaque circuit a son rôle. Basculez un disjoncteur pour voir le détail.</p>
+        <p class="section-intro">Du petit dépannage à la rénovation complète, un seul interlocuteur pour toute votre électricité.</p>
 
-        <div class="tableau">
-          <div class="tableau-rail" role="group" aria-label="Services">
-            <button type="button" class="module" data-service="depannage" aria-pressed="true" aria-controls="detailService">
-              <span class="etiquette">Dépannage</span>
-              <span class="module-corps"><span class="manette"></span></span>
-              <span class="module-voyant" aria-hidden="true"></span>
-              <span class="module-calibre" aria-hidden="true">C16</span>
-            </button>
-            <button type="button" class="module" data-service="normes" aria-pressed="false" aria-controls="detailService">
-              <span class="etiquette">Mise aux normes</span>
-              <span class="module-corps"><span class="manette"></span></span>
-              <span class="module-voyant" aria-hidden="true"></span>
-              <span class="module-calibre" aria-hidden="true">C20</span>
-            </button>
-            <button type="button" class="module" data-service="renovation" aria-pressed="false" aria-controls="detailService">
-              <span class="etiquette">Rénovation</span>
-              <span class="module-corps"><span class="manette"></span></span>
-              <span class="module-voyant" aria-hidden="true"></span>
-              <span class="module-calibre" aria-hidden="true">C20</span>
-            </button>
-            <button type="button" class="module" data-service="borne" aria-pressed="false" aria-controls="detailService">
-              <span class="etiquette">Borne de recharge</span>
-              <span class="module-corps"><span class="manette"></span></span>
-              <span class="module-voyant" aria-hidden="true"></span>
-              <span class="module-calibre" aria-hidden="true">C32</span>
-            </button>
-            <button type="button" class="module" data-service="eclairage" aria-pressed="false" aria-controls="detailService">
-              <span class="etiquette">Éclairage</span>
-              <span class="module-corps"><span class="manette"></span></span>
-              <span class="module-voyant" aria-hidden="true"></span>
-              <span class="module-calibre" aria-hidden="true">C10</span>
-            </button>
-            <button type="button" class="module" data-service="domotique" aria-pressed="false" aria-controls="detailService">
-              <span class="etiquette">Domotique</span>
-              <span class="module-corps"><span class="manette"></span></span>
-              <span class="module-voyant" aria-hidden="true"></span>
-              <span class="module-calibre" aria-hidden="true">C10</span>
-            </button>
-          </div>
-
-          <div class="detail" id="detailService" aria-live="polite">
-            <!-- Rempli par app.js ; contenu par défaut si JavaScript est désactivé -->
-            <h3 class="detail-titre">Dépannage</h3>
-            <p class="detail-texte">Plus de courant, disjoncteur qui saute, prise qui chauffe : on trouve la cause et on répare, sans vous vendre ce dont vous n'avez pas besoin.</p>
-            <dl class="detail-infos">
+        <ul class="services">
+          <li class="service">
+            <span class="service-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d='M13 2 4 14h7l-1 8 9-12h-7l1-8z'/></svg></span>
+            <h3>Dépannage</h3>
+            <p>Plus de courant, disjoncteur qui saute, prise qui chauffe : on trouve la cause et on répare, sans vous vendre ce dont vous n'avez pas besoin.</p>
+            <dl class="service-infos">
               <div><dt>Délai</dt><dd>sous 24 h en semaine</dd></div>
-              <div><dt>Tarif</dt><dd>déplacement + diagnostic dès 69 € TTC</dd></div>
+              <div><dt>Tarif</dt><dd>dès 69 € TTC</dd></div>
             </dl>
-          </div>
-        </div>
+          </li>
+          <li class="service">
+            <span class="service-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d='M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3z'/><path d='m8.5 12 2.5 2.5 4.5-5'/></svg></span>
+            <h3>Mise aux normes</h3>
+            <p>Tableau vétuste, pas de différentiel, prises sans terre : on remet votre installation en conformité avec la norme NF C 15-100.</p>
+            <dl class="service-infos">
+              <div><dt>Délai</dt><dd>travaux en 1 à 3 jours</dd></div>
+              <div><dt>Tarif</dt><dd>tableau neuf dès 890 € TTC</dd></div>
+            </dl>
+          </li>
+          <li class="service">
+            <span class="service-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d='M3 11 12 3l9 8'/><path d='M5 10v10h14V10'/><path d='M10 20v-6h4v6'/></svg></span>
+            <h3>Rénovation</h3>
+            <p>Appartement ou maison à refaire : plan des circuits, prises, éclairage et tableau, en lien avec vos autres artisans pour tenir le planning.</p>
+            <dl class="service-infos">
+              <div><dt>Délai</dt><dd>planning fixé au devis</dd></div>
+              <div><dt>Tarif</dt><dd>sur devis après visite</dd></div>
+            </dl>
+          </li>
+          <li class="service">
+            <span class="service-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x='5' y='3' width='10' height='18' rx='2'/><path d='M8 21h4M15 8h2a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V9l-2-2'/><path d='m10 7-2 4h4l-2 4'/></svg></span>
+            <h3>Borne de recharge</h3>
+            <p>Borne pour voiture électrique en maison ou en copropriété, avec la qualification qui ouvre droit aux aides et au crédit d'impôt.</p>
+            <dl class="service-infos">
+              <div><dt>Délai</dt><dd>pose en une demi-journée</dd></div>
+              <div><dt>Tarif</dt><dd>borne 7 kW dès 1 290 € TTC</dd></div>
+            </dl>
+          </li>
+          <li class="service">
+            <span class="service-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d='M9 18h6M10 21h4'/><path d='M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z'/></svg></span>
+            <h3>Éclairage</h3>
+            <p>Spots encastrés, rubans LED, éclairage extérieur et détecteurs : un éclairage qui consomme moins et met vos pièces en valeur.</p>
+            <dl class="service-infos">
+              <div><dt>Délai</dt><dd>sous une semaine</dd></div>
+              <div><dt>Tarif</dt><dd>point lumineux dès 95 € TTC</dd></div>
+            </dl>
+          </li>
+          <li class="service">
+            <span class="service-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x='7' y='2' width='10' height='20' rx='2'/><path d='M11 18h2'/><path d='M9.5 10.5 12 8.5l2.5 2V13h-5z'/></svg></span>
+            <h3>Domotique</h3>
+            <p>Volets, chauffage et lumières pilotés depuis votre téléphone, avec du matériel ouvert et sans abonnement imposé.</p>
+            <dl class="service-infos">
+              <div><dt>Délai</dt><dd>pose en 1 à 2 jours</dd></div>
+              <div><dt>Tarif</dt><dd>sur devis après visite</dd></div>
+            </dl>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -279,6 +285,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=1"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>

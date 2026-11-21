@@ -1,6 +1,6 @@
 /* =============================================================
    Atelier Ampère — site vitrine de démonstration
-   Thèmes : clair (béton) et sombre (tableau de nuit)
+   Thèmes : clair (blanc et bleu électrique) et sombre (bleu nuit)
    Couleurs inspirées des fils électriques : phase (marron),
    neutre (bleu), terre (vert/jaune) + jaune « sécurité ».
    ============================================================= */
@@ -14,32 +14,32 @@
 :root,
 [data-theme="clair"] {
   --fond: #FFFFFF;
-  --fond-alt: #EEF3FF;      /* bleu très clair */
-  --surface: #F5F8FF;
-  --encre: #0E1A4F;         /* bleu encre */
-  --texte: #24305E;
-  --texte-doux: #56618A;
-  --trait: #D3DDF5;
-  --bleu: #2459FF;          /* bleu électrique */
-  --bleu-fonce: #1336C9;
-  --bleu-clair: #DCE6FF;
+  --fond-alt: #DCE5FF;      /* bleu clair bien marqué */
+  --surface: #E8EEFF;
+  --encre: #10195E;         /* bleu marine profond */
+  --texte: #1E2A66;
+  --texte-doux: #46528A;
+  --trait: #BFCDF2;
+  --bleu: #1B3FD1;          /* bleu roi */
+  --bleu-fonce: #142E9E;
+  --bleu-clair: #D2DDFF;
   --jaune: #FFC21A;
   --neutre: #2F6FDB;
   --phase: #A0622D;
   --terre: #2FA84F;
-  --boitier: #FFFFFF;
+  --boitier: #E6ECFF;       /* cartes teintées bleu */
   --rail: #B8C6EC;
   --etiquette: #0E1A4F;
   --etiquette-texte: #FFFFFF;
-  --hero-fond: linear-gradient(135deg, #2459FF 0%, #1336C9 55%, #0E1A4F 100%);
-  --ombre-module: 0 1px 0 rgba(14, 26, 79, .06), 0 6px 14px rgba(36, 89, 255, .10);
+  --hero-fond: linear-gradient(135deg, #1B3FD1 0%, #142C9A 50%, #0B1450 100%);
+  --ombre-module: 0 1px 0 rgba(16, 25, 94, .06), 0 6px 14px rgba(27, 63, 209, .12);
   color-scheme: light;
 }
 
 [data-theme="sombre"] {
-  --fond: #0A0F2E;
-  --fond-alt: #0F1640;
-  --surface: #141C4D;
+  --fond: #070B26;
+  --fond-alt: #0C1238;
+  --surface: #111A4C;
   --encre: #F2F5FF;
   --texte: #D3DAF5;
   --texte-doux: #98A3CE;
@@ -51,11 +51,11 @@
   --neutre: #6C9BF0;
   --phase: #C98A55;
   --terre: #4CC96C;
-  --boitier: #1A2358;
+  --boitier: #152059;
   --rail: #2C3880;
   --etiquette: #F2F5FF;
   --etiquette-texte: #0A0F2E;
-  --hero-fond: linear-gradient(135deg, #1D3FD6 0%, #14278F 55%, #0A0F2E 100%);
+  --hero-fond: linear-gradient(135deg, #1832B0 0%, #101F78 50%, #070B26 100%);
   --ombre-module: 0 1px 0 rgba(0, 0, 0, .4);
   color-scheme: dark;
 }
@@ -179,68 +179,30 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 .section-alt { background: var(--fond-alt); }
 .section-intro { max-width: 60ch; color: var(--texte-doux); margin: 12px 0 0; font-size: 1.1rem; }
 
-/* ---------- Le tableau électrique ---------- */
-.tableau {
-  margin-top: 40px;
-  background: var(--fond-alt);
-  border: 1px solid var(--trait);
-  border-radius: 14px;
-  padding: 34px 28px 28px;
+/* ---------- Services : cartes ---------- */
+.services { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.service {
+  display: flex; flex-direction: column;
+  background: var(--boitier); border: 1px solid var(--trait); border-radius: 16px;
+  padding: 26px 24px 22px; box-shadow: var(--ombre-module);
+  transition: border-color .15s;
 }
-.tableau-rail {
-  display: flex; gap: 6px; overflow-x: auto; padding: 0 2px 10px;
-  position: relative;
+.service:hover { border-color: var(--bleu); }
+.service-icone {
+  width: 54px; height: 54px; border-radius: 14px;
+  display: grid; place-items: center;
+  background: var(--bleu); color: #fff;
+  margin-bottom: 18px;
 }
-/* le rail DIN métallique derrière les modules */
-.tableau-rail::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 26px; transform: translateY(-50%);
-  background: repeating-linear-gradient(90deg, var(--rail) 0 22px, color-mix(in srgb, var(--rail) 70%, transparent) 22px 26px);
-  border-radius: 3px; z-index: 0;
-}
-.module {
-  position: relative; z-index: 1; flex: 1 1 0;
-  min-width: 100px; max-width: 150px; height: 220px;
-  background: var(--boitier); border: 1px solid var(--trait); border-radius: 6px;
-  box-shadow: var(--ombre-module);
-  display: grid; grid-template-rows: 54px 1fr 20px 22px; justify-items: center; align-items: center;
-  padding: 10px 8px 8px; cursor: pointer; font-family: inherit; color: var(--texte);
-}
-.etiquette {
-  align-self: start; width: 100%;
-  background: var(--etiquette); color: var(--etiquette-texte);
-  font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: .98rem; line-height: 1.1;
-  padding: 6px 4px; border-radius: 3px; text-align: center;
-  min-height: 42px; display: grid; place-items: center;
-}
-.module-corps {
-  width: 40px; height: 86px; border-radius: 6px;
-  background: color-mix(in srgb, var(--encre) 10%, var(--boitier));
-  position: relative;
-}
-.manette {
-  position: absolute; left: 4px; right: 4px; height: 38px; bottom: 4px;
-  background: var(--encre); border-radius: 4px;
-  transition: bottom .18s cubic-bezier(.3, 1.4, .5, 1), background-color .18s;
-}
-.module[aria-pressed="true"] .manette { bottom: 44px; background: var(--jaune); }
-.module[aria-pressed="true"] { border-color: var(--bleu); box-shadow: 0 0 0 2px var(--bleu), var(--ombre-module); }
-.module-voyant { width: 9px; height: 9px; border-radius: 50%; background: var(--trait); transition: background-color .18s, box-shadow .18s; }
-.module[aria-pressed="true"] .module-voyant { background: var(--terre); box-shadow: 0 0 8px var(--terre); }
-.module-calibre { font-size: .78rem; color: var(--texte-doux); font-variant-numeric: tabular-nums; }
-.module:hover .module-corps { background: color-mix(in srgb, var(--encre) 16%, var(--boitier)); }
-
-.detail {
-  margin-top: 22px; padding: 24px 26px;
-  border-left: 5px solid var(--bleu);
-  background: var(--boitier);
-  border-radius: 0 10px 10px 0;
-  min-height: 170px;
-}
-.detail-titre { font-size: 1.8rem; font-weight: 800; }
-.detail-texte { margin: 10px 0 18px; max-width: 64ch; }
-.detail-infos { display: flex; flex-wrap: wrap; gap: 10px 40px; margin: 0; }
-.detail-infos dt { font-size: .85rem; color: var(--texte-doux); }
-.detail-infos dd { margin: 0; font-weight: 600; color: var(--encre); }
+.service-icone svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.service:first-child .service-icone { background: var(--jaune); color: #0E1A4F; } /* l'urgence se repère au premier coup d'œil */
+.service h3 { font-size: 1.5rem; font-weight: 800; }
+.service p { margin: 8px 0 18px; color: var(--texte-doux); flex: 1; }
+.service-infos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin: 0; padding-top: 14px; border-top: 1px solid var(--trait); }
+.service h3 { color: var(--bleu-fonce); }
+[data-theme="sombre"] .service h3 { color: var(--encre); }
+.service-infos dt { font-size: .8rem; color: var(--texte-doux); }
+.service-infos dd { margin: 0; font-weight: 600; color: var(--encre); font-size: .95rem; }
 
 /* ---------- Zone ---------- */
 .zone-grille { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
@@ -306,6 +268,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 @media (max-width: 900px) {
   .hero-grille, .zone-grille, .devis-grille { grid-template-columns: 1fr; }
   .hero-fils { display: none; }
+  .services { grid-template-columns: 1fr 1fr; }
   .etapes { grid-template-columns: 1fr 1fr; gap: 36px 0; }
   .etapes li:nth-child(2)::before { display: none; }
   .garanties { grid-template-columns: 1fr; gap: 16px; }
@@ -321,8 +284,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   .etapes { grid-template-columns: 1fr; }
   .etapes li::before { display: none; }
   .formulaire { grid-template-columns: 1fr; padding: 20px; }
-  .tableau { padding: 26px 14px 18px; }
-  .module { min-width: 92px; height: 200px; }
+  .services { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
