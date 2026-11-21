@@ -13,43 +13,49 @@
 
 :root,
 [data-theme="clair"] {
-  --fond: #E7EAED;          /* béton */
-  --fond-alt: #DDE1E5;
-  --surface: #F6F7F8;
-  --encre: #14171B;
-  --texte: #2B3138;
-  --texte-doux: #56606B;
-  --trait: #C5CBD2;
+  --fond: #FFFFFF;
+  --fond-alt: #EEF3FF;      /* bleu très clair */
+  --surface: #F5F8FF;
+  --encre: #0E1A4F;         /* bleu encre */
+  --texte: #24305E;
+  --texte-doux: #56618A;
+  --trait: #D3DDF5;
+  --bleu: #2459FF;          /* bleu électrique */
+  --bleu-fonce: #1336C9;
+  --bleu-clair: #DCE6FF;
   --jaune: #FFC21A;
-  --jaune-texte: #7A5600;   /* jaune lisible sur fond clair */
   --neutre: #2F6FDB;
-  --phase: #8B5A2B;
-  --terre: #3E9B4F;
-  --boitier: #FBFBFA;       /* plastique du disjoncteur */
-  --rail: #B9C0C8;
-  --etiquette: #14171B;
-  --etiquette-texte: #F6F7F8;
-  --ombre-module: 0 1px 0 rgba(20, 23, 27, .08), 0 3px 8px rgba(20, 23, 27, .08);
+  --phase: #A0622D;
+  --terre: #2FA84F;
+  --boitier: #FFFFFF;
+  --rail: #B8C6EC;
+  --etiquette: #0E1A4F;
+  --etiquette-texte: #FFFFFF;
+  --hero-fond: linear-gradient(135deg, #2459FF 0%, #1336C9 55%, #0E1A4F 100%);
+  --ombre-module: 0 1px 0 rgba(14, 26, 79, .06), 0 6px 14px rgba(36, 89, 255, .10);
   color-scheme: light;
 }
 
 [data-theme="sombre"] {
-  --fond: #101215;
-  --fond-alt: #15181C;
-  --surface: #1B1F24;
-  --encre: #F1F3F5;
-  --texte: #D5DAE0;
-  --texte-doux: #9AA3AE;
-  --trait: #2C3239;
+  --fond: #0A0F2E;
+  --fond-alt: #0F1640;
+  --surface: #141C4D;
+  --encre: #F2F5FF;
+  --texte: #D3DAF5;
+  --texte-doux: #98A3CE;
+  --trait: #263171;
+  --bleu: #5B86FF;
+  --bleu-fonce: #3D6BFF;
+  --bleu-clair: #1C2766;
   --jaune: #FFC93C;
-  --jaune-texte: #FFC93C;
   --neutre: #6C9BF0;
-  --phase: #C08552;
-  --terre: #5DBB6D;
-  --boitier: #262B31;
-  --rail: #3A4148;
-  --etiquette: #F1F3F5;
-  --etiquette-texte: #101215;
+  --phase: #C98A55;
+  --terre: #4CC96C;
+  --boitier: #1A2358;
+  --rail: #2C3880;
+  --etiquette: #F2F5FF;
+  --etiquette-texte: #0A0F2E;
+  --hero-fond: linear-gradient(135deg, #1D3FD6 0%, #14278F 55%, #0A0F2E 100%);
   --ombre-module: 0 1px 0 rgba(0, 0, 0, .4);
   color-scheme: dark;
 }
@@ -75,10 +81,11 @@ a { color: inherit; }
 h1, h2, h3 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; color: var(--encre); margin: 0; line-height: 1.05; }
 h1 { font-size: clamp(2.8rem, 7vw, 5.2rem); font-weight: 800; letter-spacing: -.01em; max-width: 15ch; }
 h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; }
+h2::after { content: ""; display: block; width: 56px; height: 5px; border-radius: 3px; background: var(--bleu); margin-top: 14px; }
 h3 { font-size: 1.35rem; font-weight: 600; }
 
 /* ---------- Bandeau de démonstration ---------- */
-.bandeau-demo { background: var(--encre); color: var(--fond); font-size: .88rem; }
+.bandeau-demo { background: #0E1A4F; color: #E6ECFF; font-size: .88rem; }
 .bandeau-demo p { margin: 0; padding: 8px 24px; text-align: center; }
 .bandeau-demo a { color: var(--jaune); font-weight: 600; }
 
@@ -92,7 +99,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 .entete-ligne { display: flex; align-items: center; gap: 24px; height: 68px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.45rem; color: var(--encre); }
 .logo svg { width: 28px; height: 28px; }
-.logo svg rect:first-child { fill: var(--encre); }
+.logo svg rect:first-child { fill: var(--bleu); }
 .logo .logo-manette { fill: var(--jaune); }
 .nav { display: flex; gap: 26px; margin-left: auto; }
 .nav a { text-decoration: none; font-weight: 500; color: var(--texte-doux); }
@@ -118,22 +125,34 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 }
 .bouton:active { transform: translateY(1px); }
 .bouton svg { width: 18px; height: 18px; fill: currentColor; }
-.bouton-plein { background: var(--encre); color: var(--fond); }
-.bouton-plein:hover { background: color-mix(in srgb, var(--encre) 85%, var(--jaune)); }
-.bouton-contour { border-color: var(--encre); color: var(--encre); }
-.bouton-contour:hover { background: var(--surface); }
+.bouton-plein { background: var(--bleu); color: #fff; }
+.bouton-plein:hover { background: var(--bleu-fonce); }
+.bouton-contour { border-color: var(--bleu); color: var(--bleu); }
+.bouton-contour:hover { background: var(--bleu-clair); }
 .bouton-jaune { background: var(--jaune); color: #14171B; }
 .bouton-jaune:hover { background: #FFD14F; }
 .bouton-appel { padding: 10px 16px; font-variant-numeric: tabular-nums; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 72px 0 88px; overflow: hidden; }
-.hero-grille { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 24px; }
+.hero { padding: 72px 0 88px; overflow: hidden; background: var(--hero-fond); color: #fff; }
+.hero h1 { color: #fff; }
+.hero .hero-lieu, .hero .hero-sous, .hero .hero-preuves { color: rgba(255, 255, 255, .86); }
+.hero .hero-preuves strong { color: #fff; }
+.hero .bouton-plein { background: var(--jaune); color: #0E1A4F; }
+.hero .bouton-plein:hover { background: #FFD14F; }
+.hero .bouton-contour { border-color: rgba(255, 255, 255, .85); color: #fff; }
+.hero .bouton-contour:hover { background: rgba(255, 255, 255, .12); }
+.hero .bornier { fill: #fff; stroke: rgba(255, 255, 255, .5); }
+.hero .vis { fill: #B8C6EC; }
+.hero .fil-neutre { stroke: #A9C1FF; } /* bleu neutre éclairci pour ressortir sur le fond bleu */
+.hero :focus-visible { outline-color: #fff; }
+.hero-grille { display: grid; grid-template-columns: 1.45fr .55fr; align-items: center; gap: 24px; }
 .hero-lieu { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; font-weight: 500; color: var(--texte-doux); }
-.voyant { width: 10px; height: 10px; border-radius: 50%; background: var(--terre); box-shadow: 0 0 0 4px color-mix(in srgb, var(--terre) 22%, transparent); }
+.voyant { width: 10px; height: 10px; border-radius: 50%; background: #5CF08A; box-shadow: 0 0 0 4px rgba(92, 240, 138, .25); }
 .hero-sous { font-size: 1.2rem; max-width: 52ch; margin: 22px 0 30px; color: var(--texte); }
 .hero-boutons { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-preuves { list-style: none; padding: 0; margin: 44px 0 0; display: flex; flex-wrap: wrap; gap: 14px 36px; color: var(--texte-doux); }
+.hero-preuves { list-style: none; padding: 0; margin: 44px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-preuves li { padding: 12px 16px; flex: 1 1 0; min-width: 140px; border-radius: 12px; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .22); }
 .hero-preuves strong { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 2rem; font-weight: 800; color: var(--encre); line-height: 1; }
 
 .hero-fils svg { width: 100%; height: auto; max-height: 420px; margin-right: -24px; }
@@ -163,7 +182,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 /* ---------- Le tableau électrique ---------- */
 .tableau {
   margin-top: 40px;
-  background: var(--surface);
+  background: var(--fond-alt);
   border: 1px solid var(--trait);
   border-radius: 14px;
   padding: 34px 28px 28px;
@@ -204,6 +223,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   transition: bottom .18s cubic-bezier(.3, 1.4, .5, 1), background-color .18s;
 }
 .module[aria-pressed="true"] .manette { bottom: 44px; background: var(--jaune); }
+.module[aria-pressed="true"] { border-color: var(--bleu); box-shadow: 0 0 0 2px var(--bleu), var(--ombre-module); }
 .module-voyant { width: 9px; height: 9px; border-radius: 50%; background: var(--trait); transition: background-color .18s, box-shadow .18s; }
 .module[aria-pressed="true"] .module-voyant { background: var(--terre); box-shadow: 0 0 8px var(--terre); }
 .module-calibre { font-size: .78rem; color: var(--texte-doux); font-variant-numeric: tabular-nums; }
@@ -211,8 +231,8 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 
 .detail {
   margin-top: 22px; padding: 24px 26px;
-  border-left: 5px solid var(--jaune);
-  background: var(--fond);
+  border-left: 5px solid var(--bleu);
+  background: var(--boitier);
   border-radius: 0 10px 10px 0;
   min-height: 170px;
 }
@@ -225,8 +245,8 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 /* ---------- Zone ---------- */
 .zone-grille { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
 .communes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.communes li { padding: 8px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--trait); font-weight: 500; }
-.communes .commune-base { background: var(--encre); color: var(--fond); border-color: var(--encre); }
+.communes li { padding: 8px 14px; border-radius: 999px; background: var(--boitier); border: 1px solid var(--trait); font-weight: 500; }
+.communes .commune-base { background: var(--bleu); color: #fff; border-color: var(--bleu); }
 
 /* ---------- Étapes ---------- */
 .etapes { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: none; }
@@ -237,7 +257,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   position: relative; z-index: 1;
   width: 46px; height: 46px; border-radius: 50%;
   display: grid; place-items: center;
-  background: var(--jaune); color: #14171B;
+  background: var(--bleu); color: #fff;
   font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.5rem;
 }
 .etapes h3 { margin: 18px 0 8px; }
@@ -245,12 +265,12 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 
 /* ---------- Garanties ---------- */
 .garanties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-.garantie { padding: 4px 28px; border-left: 3px solid var(--encre); }
+.garantie { padding: 24px 26px; margin-right: 16px; border-radius: 14px; background: var(--boitier); border-top: 5px solid var(--bleu); box-shadow: var(--ombre-module); }
 .garantie p { color: var(--texte-doux); margin: 8px 0 0; }
 
 /* ---------- Devis ---------- */
 .devis-grille { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
-.devis-urgence { margin-top: 30px; padding: 20px 22px; border-radius: 10px; background: var(--surface); border: 1px solid var(--trait); }
+.devis-urgence { margin-top: 30px; padding: 20px 22px; border-radius: 12px; background: var(--bleu-clair); border: 1px solid var(--trait); }
 .devis-urgence p { margin: 0 0 14px; }
 .formulaire {
   display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px;
@@ -288,7 +308,8 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   .hero-fils { display: none; }
   .etapes { grid-template-columns: 1fr 1fr; gap: 36px 0; }
   .etapes li:nth-child(2)::before { display: none; }
-  .garanties { grid-template-columns: 1fr; gap: 26px; }
+  .garanties { grid-template-columns: 1fr; gap: 16px; }
+  .garantie { margin-right: 0; }
 }
 @media (max-width: 680px) {
   .nav { display: none; }
